@@ -13,6 +13,6 @@ link-citations: yes
 
 # Preface {-}
 
-The following sections provide links to introductory reading material and resources to various high-throughput sequencing (HTS) data analysis problems.
+The following sections provide links to introductory reading material and resources to general statistics, bioinformatics, R programming, and various high-throughput sequencing (HTS) data analysis steps.
 
 Disclaimer: The list of resources is highly selective, and provides by no means a comprehensive database of all available resources. Instead I list books and resources that I personally have found (and continue to find) useful during my research.
