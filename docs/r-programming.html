@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>High-throughput sequencing data analysis</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="High-throughput sequencing data analysis">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="High-throughput sequencing data analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="High-throughput sequencing data analysis" />
+  
+  
+  
+
+<meta name="author" content="Maurits Evers">
+
+
+<meta name="date" content="2016-12-16">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="general-bioinformatics.html">
+<link rel="next" href="rna-seq-data-analysis.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="general-statistics-and-statistical-modelling.html"><a href="general-statistics-and-statistical-modelling.html"><i class="fa fa-check"></i><b>1</b> General statistics and statistical modelling</a><ul>
+<li class="chapter" data-level="1.1" data-path="general-statistics-and-statistical-modelling.html"><a href="general-statistics-and-statistical-modelling.html#books"><i class="fa fa-check"></i><b>1.1</b> Books</a></li>
+<li class="chapter" data-level="1.2" data-path="general-statistics-and-statistical-modelling.html"><a href="general-statistics-and-statistical-modelling.html#free-ebooks"><i class="fa fa-check"></i><b>1.2</b> Free ebooks</a></li>
+<li class="chapter" data-level="1.3" data-path="general-statistics-and-statistical-modelling.html"><a href="general-statistics-and-statistical-modelling.html#web-sources-blogs-and-online-forums"><i class="fa fa-check"></i><b>1.3</b> Web sources, blogs and online forums</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="general-bioinformatics.html"><a href="general-bioinformatics.html"><i class="fa fa-check"></i><b>2</b> General bioinformatics</a><ul>
+<li class="chapter" data-level="2.1" data-path="general-bioinformatics.html"><a href="general-bioinformatics.html#books-1"><i class="fa fa-check"></i><b>2.1</b> Books</a></li>
+<li class="chapter" data-level="2.2" data-path="general-bioinformatics.html"><a href="general-bioinformatics.html#free-ebooks-notes-and-manuscripts"><i class="fa fa-check"></i><b>2.2</b> Free Ebooks, notes, and manuscripts</a></li>
+<li class="chapter" data-level="2.3" data-path="general-bioinformatics.html"><a href="general-bioinformatics.html#web-sources-blogs-and-online-forums-1"><i class="fa fa-check"></i><b>2.3</b> Web sources, blogs and online forums</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r-programming.html"><a href="r-programming.html"><i class="fa fa-check"></i><b>3</b> R programming</a><ul>
+<li class="chapter" data-level="3.1" data-path="r-programming.html"><a href="r-programming.html#tutorial-and-notes"><i class="fa fa-check"></i><b>3.1</b> Tutorial and notes</a></li>
+<li class="chapter" data-level="3.2" data-path="r-programming.html"><a href="r-programming.html#ebooks"><i class="fa fa-check"></i><b>3.2</b> Ebooks</a></li>
+<li class="chapter" data-level="3.3" data-path="r-programming.html"><a href="r-programming.html#online-courses"><i class="fa fa-check"></i><b>3.3</b> Online courses</a></li>
+<li class="chapter" data-level="3.4" data-path="r-programming.html"><a href="r-programming.html#web-sources-blogs-and-online-forums-2"><i class="fa fa-check"></i><b>3.4</b> Web sources, blogs and online forums</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html"><i class="fa fa-check"></i><b>4</b> RNA-seq data analysis</a><ul>
+<li class="chapter" data-level="4.1" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html#general-workflow"><i class="fa fa-check"></i><b>4.1</b> General workflow</a></li>
+<li class="chapter" data-level="4.2" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html#differential-gene-expression-dge-analysis"><i class="fa fa-check"></i><b>4.2</b> Differential gene expression (DGE) analysis</a></li>
+<li class="chapter" data-level="4.3" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html#fusion-gene-identification"><i class="fa fa-check"></i><b>4.3</b> Fusion gene identification</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">High-throughput sequencing data analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="r-programming" class="section level1">
+<h1><span class="header-section-number">3</span> R programming</h1>
+<p><em>Disclaimer: The following list lists introductory and more advanced material on programming in R and is far from complete.</em></p>
+<p>The order of the materials roughly reflects increasing complexity/difficulty/comprehensiveness. I am listing tutorial materials and notes first and (e)books second, because I found that learning R requires a practical learning-by-doing and following-examples type of approach.</p>
+<div id="tutorial-and-notes" class="section level2">
+<h2><span class="header-section-number">3.1</span> Tutorial and notes</h2>
+<p><a href="http://www.cbs.dtu.dk/courses/thaiworkshop/exercises/crashR.2.pdf">Gautier, <em>R crash course</em></a>: A short (17 pages) crash course on programming in R.</p>
+<p>I recommend this as a half-day crash-course introduction to R. We have used this material in the past when running R-based gene expression analysis courses for biologists.</p>
+<hr />
+<p><a href="https://cran.r-project.org/doc/manuals/R-intro.pdf">Venables et al., <em>An Introduction to R</em></a>: Fairly comprehensive notes (105 pages) on R from CRAN.</p>
+<p>This is a step up from the crash-course overview. Working through this should give you a good practical working knowledge of how to “do things” in R. Either read front-to-back or use alongside implementing some simple R projects.</p>
+<hr />
+<p><a href="https://drive.google.com/file/d/0B4udF24Yxab0S1hnZlBBTmgzM3M/view">Phillips, <em>Yarrr! The pirate’s guide to R</em></a>: From the book</p>
+<blockquote>
+<p>“This book is meant to introduce you to the basic analytical tools in R, from basic coding and analyses, to data wrangling, plotting, and statistical inference.”</p>
+</blockquote>
+<p>Phillips more or less covers similar ground to Venables, and also introduces some popular and useful R packages from the <a href="https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/">tidyverse</a>.</p>
+<hr />
+<p><a href="http://adv-r.had.co.nz/">Wickham, <em>Advanced R</em></a>: From the website</p>
+<blockquote>
+<p>“The book is designed primarily for R users who want to improve their programming skills and understanding of the language.”</p>
+</blockquote>
+<p>From the master himself.</p>
+</div>
+<div id="ebooks" class="section level2">
+<h2><span class="header-section-number">3.2</span> Ebooks</h2>
+<p>Some of the following books cover very advanced topics. I would not recommend an R beginner starting with these.</p>
+<hr />
+<p><a href="https://csgillespie.github.io/efficientR/index.html">Gillespie &amp; Lovelace, <em>Efficient R programming</em></a>: This is the online version of the O’Reilly book <a href="https://www.amazon.com/Efficient-Programming-Practical-Guide-Smarter/dp/1491950781"><em>Efficient R programming</em></a>.</p>
+<hr />
+<p><a href="http://r4ds.had.co.nz">Wickham &amp; Grolemund, <em>R for Data Science</em></a>: This is the online version of the upcoming (late 2016) O’Reilly book <a href="https://www.amazon.com/R-Data-Science-Hadley-Wickham/dp/1491910399/ref=as_li_ss_tl?ie=UTF8&amp;qid=1469550189&amp;sr=8-1&amp;keywords=R+for+data+science&amp;linkCode=sl1&amp;tag=devtools-20&amp;linkId=6fe0069f9605cf847ed96c191f4e84dd"><em>R for Data Science</em></a>.</p>
+<hr />
+<p><a href="http://www-bcf.usc.edu/~gareth/ISL/">James et al., <em>An Introduction to Statistical Learning with Applications in R</em></a>: From the website</p>
+<blockquote>
+<p>“This book provides an introduction to statistical learning methods. It is aimed for upper level undergraduate students, masters students and Ph.D. students in the non-mathematical sciences. The book also contains a number of R labs with detailed explanations on how to implement the various methods in real life settings, and should be a valuable resource for a practicing data scientist.”</p>
+</blockquote>
+<p>This book can be considered the <em>little brother</em> of <a href="http://statweb.stanford.edu/~tibs/ElemStatLearn/"><em>The Elements of Statistical Learning</em></a>.</p>
+</div>
+<div id="online-courses" class="section level2">
+<h2><span class="header-section-number">3.3</span> Online courses</h2>
+<p>Various online courses exist. Following are two sites that provide links to practical online R courses. Some are free, some are not.</p>
+<hr />
+<p><a href="http://r-exercises.com/r-courses/">R course finder</a>: Provides a list of nearly 100 R courses, offered by various universities and institutes, in different formats, and at different costs (starting from free).</p>
+<hr />
+<p><a href="https://www.coursera.org/courses?languages=en&amp;query=r+programming">R courses on coursera</a>: Introductory R courses exist from Johns Hopkins and Duke universities.</p>
+</div>
+<div id="web-sources-blogs-and-online-forums-2" class="section level2">
+<h2><span class="header-section-number">3.4</span> Web sources, blogs and online forums</h2>
+<p>R has a very active community, and in my experience staying up to date with new developments requires at least passive engagement with internet sources.</p>
+<hr />
+<p><a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
+<p>The Comprehensive R Archive Network (CRAN) is the central platform for R package distribution. Here you can search for available R packages, and access the often extensive R package documentation (in the form of vignettes and reference manuals).</p>
+<p>All packages from CRAN can be installed directly from within R.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;package_name&quot;</span>);</code></pre></div>
+<pre><code>## Warning: package &#39;package_name&#39; is not available (for R version 3.3.1)</code></pre>
+<hr />
+<p><a href="https://www.bioconductor.org/" class="uri">https://www.bioconductor.org/</a></p>
+<p>Bioconductor provides tools for the statistical analysis and visualisation of HTS data. This includes specialised R packages (including extensive vignettes and reference manuals) and tutorials.</p>
+<p>All R/Bioconductor packages can be installed directly from within R.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">source</span>(<span class="st">&quot;https://www.bioconductor.org/biocLite.R&quot;</span>);</code></pre></div>
+<pre><code>## Bioconductor version 3.3 (BiocInstaller 1.22.3), ?biocLite for help</code></pre>
+<pre><code>## A newer version of Bioconductor is available for this version of R,
+##   ?BiocUpgrade for help</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">biocLite</span>(<span class="st">&quot;package_name&quot;</span>);</code></pre></div>
+<pre><code>## BioC_mirror: https://bioconductor.org</code></pre>
+<pre><code>## Using Bioconductor 3.3 (BiocInstaller 1.22.3), R 3.3.1 (2016-06-21).</code></pre>
+<pre><code>## Installing package(s) &#39;package_name&#39;</code></pre>
+<pre><code>## Warning: package &#39;package_name&#39; is not available (for R version 3.3.1)</code></pre>
+<hr />
+<p><a href="https://www.r-bloggers.com/" class="uri">https://www.r-bloggers.com/</a></p>
+<p>R-bloggers is an aggregate blog site, with news surrounding R package development, R tutorials and general R updates. Articles cover a very broad spectrum of R applications.</p>
+<hr />
+<p><a href="http://stackoverflow.com/" class="uri">http://stackoverflow.com/</a></p>
+<p>Help for R-related programming questions can be found on Stack Overflow. Before posting a new question, make sure to search through their records of R-related questions. Chances are generally very high that somebody has had a similar issue at some point in the past.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="general-bioinformatics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rna-seq-data-analysis.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

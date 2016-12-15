@@ -1,0 +1,28 @@
+# General statistics and statistical modelling
+
+## Books
+Following are some great books that focus on a more practical introduction to statistics and statistical modelling (e.g. using R as a compute environment). The order of books loosely reflects the increase in complexity of the material covered.
+
+[<img src="deVeaux.jpg" alt="deVeaux" style="height: 200px;"/>](http://www.bookdepository.com/STATS-Richard-D-de-Veaux/9780134243900)
+[<img src="dalgaard.jpg" alt="Dalgaard" style="height: 200px;"/>](https://www.bookdepository.com/Introductory-Statistics-with-R/9780387790534)
+[<img src="casella.jpg" alt="Casella" style="height: 200px;"/>](http://www.bookdepository.com/Statistical-Inference-George-Casell-Roger-Berger/9780495391876)
+[<img src="mcelreath.jpg" alt="McElreath" style="height: 200px;"/>](https://www.bookdepository.com/Statistical-Rethinking-Richard-McElreath/9781482253443)
+[<img src="gelman.jpg" alt="Gelman" style="height: 200px;"/>](https://www.bookdepository.com/Bayesian-Data-Analysis-Andrew-Gelman/9781439840955)
+
+[Stats by de Veaux](http://www.bookdepository.com/STATS-Richard-D-de-Veaux/9780134243900) is the most basic statistics introductory book listed here. It covers the basics and more, and is targeting undergraduate students across different disciplines (biomedical sciences, social sciences, political sciences, physics, etc.). Unfortunately it is not cheap.
+
+[Dalgaard](https://www.bookdepository.com/Introductory-Statistics-with-R/9780387790534) and [Casella & Berger](http://www.bookdepository.com/Statistical-Inference-George-Casell-Roger-Berger/9780495391876) are two introductory and more advanced statistics textbooks. [McElreath](https://www.bookdepository.com/Statistical-Rethinking-Richard-McElreath/9781482253443) offers a fantastic introduction to Bayesian statistics and modelling. [Gelman et al.](https://www.bookdepository.com/Bayesian-Data-Analysis-Andrew-Gelman/9781439840955) is a very comprehensive work on Bayesian data analysis containing many practical examples.    
+
+
+## Free ebooks
+
+[<img src="OpenIntro_statistics.jpg" alt="OI" style="height: 200px;"/>](https://www.openintro.org/stat/textbook.php)
+
+I have not used the [OpenIntro Statistics](https://www.openintro.org/stat/textbook.php) book but reviews have been very favourable. It's also free. OpenIntro also offers additional reading and course material.
+
+
+## Web sources, blogs and online forums
+
+[CrossValidated](http://stats.stackexchange.com/)   
+
+CrossValidated is an online forum for people interested in statistics, machine learning, and data analysis. CrossValidated focusses on the theory and methodology of analysing data rather than on programming language-specific issues. Make sure to search through the CrossValidated records before posting a new question.

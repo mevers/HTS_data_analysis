@@ -1,0 +1,7 @@
+1. Check if mhs is mounted
+2. rsync to 
+
+
+rsync -a /var /media/backup1/rsync || echo "Backup Failed for $(date)| mail -s "Backup Failed" someemail@host
+
+

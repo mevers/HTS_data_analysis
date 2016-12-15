@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>High-throughput sequencing data analysis</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="High-throughput sequencing data analysis">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="High-throughput sequencing data analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="High-throughput sequencing data analysis" />
+  
+  
+  
+
+<meta name="author" content="Maurits Evers">
+
+
+<meta name="date" content="2016-12-16">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="r-programming.html">
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="general-statistics-and-statistical-modelling.html"><a href="general-statistics-and-statistical-modelling.html"><i class="fa fa-check"></i><b>1</b> General statistics and statistical modelling</a><ul>
+<li class="chapter" data-level="1.1" data-path="general-statistics-and-statistical-modelling.html"><a href="general-statistics-and-statistical-modelling.html#books"><i class="fa fa-check"></i><b>1.1</b> Books</a></li>
+<li class="chapter" data-level="1.2" data-path="general-statistics-and-statistical-modelling.html"><a href="general-statistics-and-statistical-modelling.html#free-ebooks"><i class="fa fa-check"></i><b>1.2</b> Free ebooks</a></li>
+<li class="chapter" data-level="1.3" data-path="general-statistics-and-statistical-modelling.html"><a href="general-statistics-and-statistical-modelling.html#web-sources-blogs-and-online-forums"><i class="fa fa-check"></i><b>1.3</b> Web sources, blogs and online forums</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="general-bioinformatics.html"><a href="general-bioinformatics.html"><i class="fa fa-check"></i><b>2</b> General bioinformatics</a><ul>
+<li class="chapter" data-level="2.1" data-path="general-bioinformatics.html"><a href="general-bioinformatics.html#books-1"><i class="fa fa-check"></i><b>2.1</b> Books</a></li>
+<li class="chapter" data-level="2.2" data-path="general-bioinformatics.html"><a href="general-bioinformatics.html#free-ebooks-notes-and-manuscripts"><i class="fa fa-check"></i><b>2.2</b> Free Ebooks, notes, and manuscripts</a></li>
+<li class="chapter" data-level="2.3" data-path="general-bioinformatics.html"><a href="general-bioinformatics.html#web-sources-blogs-and-online-forums-1"><i class="fa fa-check"></i><b>2.3</b> Web sources, blogs and online forums</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r-programming.html"><a href="r-programming.html"><i class="fa fa-check"></i><b>3</b> R programming</a><ul>
+<li class="chapter" data-level="3.1" data-path="r-programming.html"><a href="r-programming.html#tutorial-and-notes"><i class="fa fa-check"></i><b>3.1</b> Tutorial and notes</a></li>
+<li class="chapter" data-level="3.2" data-path="r-programming.html"><a href="r-programming.html#ebooks"><i class="fa fa-check"></i><b>3.2</b> Ebooks</a></li>
+<li class="chapter" data-level="3.3" data-path="r-programming.html"><a href="r-programming.html#online-courses"><i class="fa fa-check"></i><b>3.3</b> Online courses</a></li>
+<li class="chapter" data-level="3.4" data-path="r-programming.html"><a href="r-programming.html#web-sources-blogs-and-online-forums-2"><i class="fa fa-check"></i><b>3.4</b> Web sources, blogs and online forums</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html"><i class="fa fa-check"></i><b>4</b> RNA-seq data analysis</a><ul>
+<li class="chapter" data-level="4.1" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html#general-workflow"><i class="fa fa-check"></i><b>4.1</b> General workflow</a></li>
+<li class="chapter" data-level="4.2" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html#differential-gene-expression-dge-analysis"><i class="fa fa-check"></i><b>4.2</b> Differential gene expression (DGE) analysis</a></li>
+<li class="chapter" data-level="4.3" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html#fusion-gene-identification"><i class="fa fa-check"></i><b>4.3</b> Fusion gene identification</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">High-throughput sequencing data analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="rna-seq-data-analysis" class="section level1">
+<h1><span class="header-section-number">4</span> RNA-seq data analysis</h1>
+<p>Many resources and introductory tutorials to typical RNA-seq workflows exist on the web. The choice of tools and computational methods is often a matter of choice. Generally R/Bioconductor is a great resource for HTS-data related tutorials.</p>
+<div id="general-workflow" class="section level2">
+<h2><span class="header-section-number">4.1</span> General workflow</h2>
+<p>A typical RNA-seq data analysis workflow may consist of (some or all of) the following steps (some tools I have used are listed in brackets):</p>
+<ol style="list-style-type: decimal">
+<li>Quality assessment of raw reads (<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">fastqc</a>)</li>
+<li>Adapter trimming and quality filtering (<a href="http://cutadapt.readthedocs.io/en/stable/guide.html">cutadapt</a>, <a href="http://www.usadellab.org/cms/?page=trimmomatic">trimmomatic</a>, <a href="https://sourceforge.net/projects/bbmap/">bbduk.sh</a>)</li>
+<li>Read alignment to reference genome (<a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">bowtie2</a>, <a href="https://ccb.jhu.edu/software/tophat/index.shtml">tophat</a>, <a href="http://bio-bwa.sourceforge.net/">bwa-mem</a>, <a href="https://github.com/alexdobin/STAR">STAR</a>)</li>
+<li>Quality assessment of mapped reads (<a href="http://rseqc.sourceforge.net/">RseQC</a>, <a href="https://github.com/hartleys/QoRTs">QoRTs</a>)</li>
+<li>Read de-duplication (<a href="http://www.htslib.org/">samtools</a>, <a href="https://broadinstitute.github.io/picard/">picard-tools</a>)</li>
+<li>Count summarisation (<a href="http://www-huber.embl.de/users/anders/HTSeq/">HTSeq</a>, <a href="http://bioinf.wehi.edu.au/featureCounts/">featureCounts</a>)</li>
+<li>Differential gene expression analysis (<a href="https://bioconductor.org/packages/release/bioc/html/DESeq2.html">DESeq2</a>, <a href="https://bioconductor.org/packages/release/bioc/html/limma.html">limma</a>, <a href="http://bioconductor.org/packages/release/bioc/html/edgeR.html">edgeR</a>)</li>
+</ol>
+<hr />
+<p><a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8">Conesa et al.</a> have published a survey of best practices for RNA-seq data analysis that provides a nice overview of typical analysis steps and how to critically assess results.</p>
+<hr />
+<p><a href="https://github.com/griffithlab/rnaseq_tutorial/wiki">Griffith lab RNA-seq tutorial</a></p>
+<p>Griffith et al. provide an online Wiki-style RNA-seq tutorial with exercises.</p>
+</div>
+<div id="differential-gene-expression-dge-analysis" class="section level2">
+<h2><span class="header-section-number">4.2</span> Differential gene expression (DGE) analysis</h2>
+<p>I can specifically recommend the following three tutorials/vignettes surrounding the R packages DESeq2 and limma. In terms of the underlying statistical model, there exists a lot of overlap between DESeq2 and limma. Whether to use one over the other is therefore largely a matter of choice. Both methods are often regarded as the gold-standard methods in regards to DGE analyses.</p>
+<hr />
+<p><a href="http://www.bioconductor.org/help/workflows/rnaseqGene/" class="uri">http://www.bioconductor.org/help/workflows/rnaseqGene/</a></p>
+<p>R/Bioconductor has a good tutorial on how to get from raw RNA-seq data to identifying differentially expressed genes.</p>
+<hr />
+<p><a href="https://www.bioconductor.org/packages/release/bioc/html/DESeq2.html">DESeq2</a></p>
+<p>The vignette is regularly updated and offers a great tutorial on how to perform differential gene expression analyses within R. The vignette also provides details on the underlying statistical modelling approach. Personally, I slightly favour the DESeq2 documentation and approach in my own research analyses.</p>
+<hr />
+<p><a href="https://www.bioconductor.org/packages/release/bioc/html/limma.html">Limma</a></p>
+<p>The user guide offers an excellent tutorial using a wide range of different sample case studies on performing differential gene expression analyses within R.</p>
+</div>
+<div id="fusion-gene-identification" class="section level2">
+<h2><span class="header-section-number">4.3</span> Fusion gene identification</h2>
+<p>Various fusion/chimeric transcript identification tools exist.</p>
+<p><a href="http://nar.oxfordjournals.org/content/44/5/e47">Liu et al.</a> performed a similar benchmark analysis of 15 fusion detection tools in their 2015 Nucleic Acids Research paper.</p>
+<hr />
+<p>Another list of 39 (as of December 2016) fusion detection tools in given on <a href="https://www.biostars.org/p/45986/">Biostars</a>.</p>
+<hr />
+<p><a href="https://bitbucket.org/kokonech/infusion/overview">InFusion</a></p>
+<p>InFusion is one of the most recently published tools. It was written in C++/Python, and provides detailed instructions on how to compile the source code, and run the program.</p>
+<hr />
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="r-programming.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

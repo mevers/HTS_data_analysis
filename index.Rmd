@@ -1,0 +1,18 @@
+---
+title: "High-throughput sequencing data analysis"
+subtitle: "A collection of (more or less) introductory reading material"
+author: "[Maurits Evers](mailto:maurits.evers@anu.edu.au)"
+date: "`r Sys.Date()`"
+knit: "bookdown::render_book"
+output:
+  bookdown::gitbook: default
+documentclass: book
+biblio-style: apalike
+link-citations: yes
+---
+
+# Preface {-}
+
+The following sections provide links to introductory reading material and resources to various high-throughput sequencing (HTS) data analysis problems.
+
+Disclaimer: The list of resources is highly selective, and provides by no means a comprehensive database of all available resources. Instead I list books and resources that I personally have found (and continue to find) useful during my research.
