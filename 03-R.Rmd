@@ -1,6 +1,6 @@
 # R programming
 
-*Disclaimer: The following list lists introductory and more advanced material on programming in R and is far from complete.*
+*Disclaimer: The following sections lists introductory and more advanced material on programming in R and is far from complete.*
 
 The order of the materials roughly reflects increasing complexity/difficulty/comprehensiveness. I am listing tutorial materials and notes first and (e)books second, because I found that learning R requires a practical learning-by-doing and following-examples type of approach.
 
