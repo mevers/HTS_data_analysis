@@ -8,7 +8,7 @@
   <title>High-throughput sequencing data analysis</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="High-throughput sequencing data analysis">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.3.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="High-throughput sequencing data analysis" />
   <meta property="og:type" content="book" />
@@ -26,7 +26,7 @@
 <meta name="author" content="Maurits Evers">
 
 
-<meta name="date" content="2016-12-16">
+<meta name="date" content="2016-12-20">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -94,6 +94,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <body>
 
 
+
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
 
     <div class="book-summary">
@@ -142,9 +143,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="rna-seq-data-analysis" class="section level1">
 <h1><span class="header-section-number">4</span> RNA-seq data analysis</h1>
 <p>Many resources and introductory tutorials to typical RNA-seq workflows exist on the web. The choice of tools and computational methods is often a matter of choice. Generally R/Bioconductor is a great resource for HTS-data related tutorials.</p>
+<p>Often the best approach is to locally reproduce results discussed as part of different tools. For example, most R/Bioconductor packages provide sample analyses and case studies as part of their vignettes.</p>
 <div id="general-workflow" class="section level2">
 <h2><span class="header-section-number">4.1</span> General workflow</h2>
-<p>A typical RNA-seq data analysis workflow may consist of (some or all of) the following steps (some tools I have used are listed in brackets):</p>
+<p>A typical RNA-seq data analysis workflow may consist of (some or all of) the following steps (in brackets are tools that I have used in the past):</p>
 <ol style="list-style-type: decimal">
 <li>Quality assessment of raw reads (<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">fastqc</a>)</li>
 <li>Adapter trimming and quality filtering (<a href="http://cutadapt.readthedocs.io/en/stable/guide.html">cutadapt</a>, <a href="http://www.usadellab.org/cms/?page=trimmomatic">trimmomatic</a>, <a href="https://sourceforge.net/projects/bbmap/">bbduk.sh</a>)</li>
@@ -153,6 +155,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Read de-duplication (<a href="http://www.htslib.org/">samtools</a>, <a href="https://broadinstitute.github.io/picard/">picard-tools</a>)</li>
 <li>Count summarisation (<a href="http://www-huber.embl.de/users/anders/HTSeq/">HTSeq</a>, <a href="http://bioinf.wehi.edu.au/featureCounts/">featureCounts</a>)</li>
 <li>Differential gene expression analysis (<a href="https://bioconductor.org/packages/release/bioc/html/DESeq2.html">DESeq2</a>, <a href="https://bioconductor.org/packages/release/bioc/html/limma.html">limma</a>, <a href="http://bioconductor.org/packages/release/bioc/html/edgeR.html">edgeR</a>)</li>
+<li>Gene ontology enrichment analysis/Gene set enrichment analysis (<a href="https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html">clusterProfiler</a>, <a href="http://software.broadinstitute.org/gsea/index.jsp">GSEA</a>)</li>
 </ol>
 <hr />
 <p><a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8">Conesa et al.</a> have published a survey of best practices for RNA-seq data analysis that provides a nice overview of typical analysis steps and how to critically assess results.</p>
