@@ -1,14 +1,18 @@
 # R programming
 
-*Disclaimer: The following sections lists introductory and more advanced material on programming in R and is far from complete.*
+*Disclaimer: The following sections list introductory and more advanced material on programming in R and is far from complete.*
 
-The order of the materials roughly reflects increasing complexity/difficulty/comprehensiveness. I am listing tutorial materials and notes first and (e)books second, because I found that learning R requires a practical learning-by-doing and following-examples type of approach.
+The order of the materials in every section roughly reflects increasing complexity/difficulty/comprehensiveness. I am listing tutorial materials and notes first and (e)books second, because in my opinion learning R requires a practical learning-by-doing and following-examples type of approach. The best thing to do is to "start coding" yourself right from the start.
+
+It goes without saying that in order to execute R code, you need to install the R compute environment on your local computer. You can download R from the [R Project](https://www.r-project.org/).
+
+[RStudio](https://www.rstudio.com/products/RStudio/) is a full IDE (integrated development environment) for code development, including an editor and tools for code management, debugging, and plotting. I highly recommend using it.
 
 ## Tutorial and notes
 
 [Gautier, *R crash course*](http://www.cbs.dtu.dk/courses/thaiworkshop/exercises/crashR.2.pdf): A short (17 pages) crash course on programming in R.
 
-I recommend this as a half-day crash-course introduction to R. We have used this material in the past when running R-based gene expression analysis courses for biologists.
+I recommend this as a half-day crash-course introduction to R. I have used this material in the past when running R-based gene expression analysis courses for biologists.
 
 ---
 
@@ -34,7 +38,7 @@ From the master himself.
 
 ## Ebooks
 
-Some of the following books cover very advanced topics. I would not recommend an R beginner starting with these.
+Some of the following books cover very advanced topics. I would not recommend an R beginner starting with these; however, topics covered in these book will become relevant as computational R projects become more complex.  
 
 ---
 
@@ -67,7 +71,7 @@ Various online courses exist. Following are two sites that provide links to prac
 
 ## Web sources, blogs and online forums
 
-R has a very active community, and in my experience staying up to date with new developments requires at least passive engagement with internet sources.
+R has a very active community, and in my experience staying up to date with new developments requires at least occasionally following various web sources.
 
 ---
 

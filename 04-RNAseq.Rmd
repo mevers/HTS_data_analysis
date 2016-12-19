@@ -2,9 +2,11 @@
 
 Many resources and introductory tutorials to typical RNA-seq workflows exist on the web. The choice of tools and computational methods is often a matter of choice. Generally R/Bioconductor is a great resource for HTS-data related tutorials.
 
+Often the best approach is to locally reproduce results discussed as part of different tools. For example, most R/Bioconductor packages provide sample analyses and case studies as part of their vignettes.   
+
 ## General workflow
 
-A typical RNA-seq data analysis workflow may consist of (some or all of) the following steps (some tools I have used are listed in brackets):
+A typical RNA-seq data analysis workflow may consist of (some or all of) the following steps (in brackets are tools that I have used in the past):
 
 1. Quality assessment of raw reads ([fastqc](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
 2. Adapter trimming and quality filtering ([cutadapt](http://cutadapt.readthedocs.io/en/stable/guide.html), [trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic), [bbduk.sh](https://sourceforge.net/projects/bbmap/))
@@ -13,6 +15,7 @@ A typical RNA-seq data analysis workflow may consist of (some or all of) the fol
 5. Read de-duplication ([samtools](http://www.htslib.org/), [picard-tools](https://broadinstitute.github.io/picard/))
 6. Count summarisation ([HTSeq](http://www-huber.embl.de/users/anders/HTSeq/), [featureCounts](http://bioinf.wehi.edu.au/featureCounts/))
 7. Differential gene expression analysis ([DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html), [limma](https://bioconductor.org/packages/release/bioc/html/limma.html), [edgeR](http://bioconductor.org/packages/release/bioc/html/edgeR.html))
+8. Gene ontology enrichment analysis/Gene set enrichment analysis ([clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html), [GSEA](http://software.broadinstitute.org/gsea/index.jsp))
 
 ---
 

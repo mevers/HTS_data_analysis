@@ -5,9 +5,9 @@ Following are some general introductory Bioinformatics textbooks.
 
 [<img src="irizarry.jpg" alt="Irizarry" style="height: 200px;"/>](https://leanpub.com/dataanalysisforthelifesciences) [<img src="ewens.jpg" alt="Ewens" style="height: 200px;"/>](https://www.bookdepository.com/Statistical-Methods-in-Bioinformatics/9780387400822) [<img src="gentleman.jpg" alt="Gentleman" style="height: 200px;"/>](https://www.bookdepository.com/Bioinformatics-Computational-Biology-Solutions-Using-R-Bioconductor-Robert-Gentleman/9780387251462)
 
-[Irizarry & Love](https://leanpub.com/dataanalysisforthelifesciences) is a great pay-as-you-like textbook by two very well-known figures in the field (Rafael Irizarry is a statistican from the Havard School of Health with a long research and publication in statistical Bioinformatics; Michael Love co-developed the differential gene expression analysis R package DESeq2).
+[Irizarry & Love](https://leanpub.com/dataanalysisforthelifesciences) is a great pay-as-you-like textbook by two very well-known figures in the field (Rafael Irizarry is a statistican from the Havard School of Health with a long research and publication history in statistical Bioinformatics; Michael Love co-developed the differential gene expression analysis R package DESeq2).
 
-I found [Ewens & Grant](https://www.bookdepository.com/Statistical-Methods-in-Bioinformatics/9780387400822) an excellent resource when I started learning about (statistical) Bioinformatics, combining a refresher in statistics with introductions to many computational/statistical Bioinformatics subjects.
+I found [*Statistical Methods in Bioinformatics* by Ewens & Grant](https://www.bookdepository.com/Statistical-Methods-in-Bioinformatics/9780387400822) an excellent resource when I started learning about (statistical) Bioinformatics, combining a refresher in statistics with introductions to many computational/statistical Bioinformatics subjects.
 
 [Gentleman et al.](https://www.bookdepository.com/Bioinformatics-Computational-Biology-Solutions-Using-R-Bioconductor-Robert-Gentleman/9780387251462) give many Bioinformatics examples using publicly available data and methods available in R/Bioconductor. Authors include very prominent figures in the field.
 
