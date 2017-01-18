@@ -1,10 +1,10 @@
 # R programming
 
-*Disclaimer: The following sections list introductory and more advanced material on programming in R and is far from complete.*
+*Disclaimer: The following sections list introductory and more advanced material on programming in R, without any claim of completeness.*
 
 The order of the materials in every section roughly reflects increasing complexity/difficulty/comprehensiveness. I am listing tutorial materials and notes first and (e)books second, because in my opinion learning R requires a practical learning-by-doing and following-examples type of approach. The best thing to do is to "start coding" yourself right from the start.
 
-It goes without saying that in order to execute R code, you need to install the R compute environment on your local computer. You can download R from the [R Project](https://www.r-project.org/).
+It goes without saying that in order to be able to execute R code, you need to install the R compute environment on your computer. You can download R from the [R Project](https://www.r-project.org/).
 
 [RStudio](https://www.rstudio.com/products/RStudio/) is a full IDE (integrated development environment) for code development, including an editor and tools for code management, debugging, and plotting. I highly recommend using it.
 
@@ -38,16 +38,15 @@ From the master himself.
 
 ## Ebooks
 
-Some of the following books cover very advanced topics. I would not recommend an R beginner starting with these; however, topics covered in these book will become relevant as computational R projects become more complex.  
+Some of the following books cover very advanced topics. I would not recommend an R beginner starting with these; however, topics covered in these books will become relevant as computational R projects become more complex.  
 
 ---
+
 [<img src="gillespie.png" alt="Gillespie" style="height: 200px;"/>](https://www.manning.com/books/practical-data-science-with-r)
 
 [Gillespie & Lovelace](https://csgillespie.github.io/efficientR/index.html) have an online version of their O'Reilly book [*Efficient R programming*](https://www.amazon.com/Efficient-Programming-Practical-Guide-Smarter/dp/1491950781). From the website:
 
 > "There are many excellent R resources for visualization, data science, and package development. Hundreds of scattered vignettes, web pages, and forums explain how to use R in particular domains. But little has been written on how to simply make R work effectively—until now. This hands-on book teaches novices and experienced R users how to write efficient R code."
-
-
 
 ---
 
@@ -56,6 +55,8 @@ Some of the following books cover very advanced topics. I would not recommend an
 [Zumel & Mount](https://www.manning.com/books/practical-data-science-with-r) has received a lot of positive reviews. From the website:
 
 > "Practical Data Science with R lives up to its name. It explains basic principles without the theoretical mumbo-jumbo and jumps right to the real use cases you'll face as you collect, curate, and analyze the data crucial to the success of your business. You'll apply the R programming language and statistical analysis techniques to carefully explained examples based in marketing, business intelligence, and decision support."
+
+I haven't had a chance to check out this book yet; based on reviews and on the website, Zumel & Mount provide an introduction to practical R through typical data science problems involving statistical modelling, machine learning, data visualisation, etc.
 
 ---
 
@@ -99,7 +100,7 @@ R has a very active community, and in my experience staying up to date with new 
 The Comprehensive R Archive Network (CRAN) is the central platform for R package distribution. Here you can search for available R packages, and access the often extensive R package documentation (in the form of vignettes and reference manuals).
 
 All packages from CRAN can be installed directly from within R.
-```{r}
+```{r eval=FALSE}
 install.packages("package_name");
 ```
 
@@ -110,7 +111,7 @@ install.packages("package_name");
 Bioconductor provides tools for the statistical analysis and visualisation of HTS data. This includes specialised R packages (including extensive vignettes and reference manuals) and tutorials.
 
 All R/Bioconductor packages can be installed directly from within R.
-```{r}
+```{r eval=FALSE}
 source("https://www.bioconductor.org/biocLite.R");
 biocLite("package_name");
 ```
