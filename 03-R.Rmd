@@ -36,6 +36,10 @@ Phillips more or less covers similar ground to Venables, and also introduces som
 
 From the master himself.
 
+---
+
+[Bryan et al., *Happy Git and GitHub for the useR*](http://happygitwithr.com): This is a tutorial on how to setup Git/GitHub within RStudio. It covers basic Git/GitHub and how to connect RStudio to Git/GitHub.
+
 ## Ebooks
 
 Some of the following books cover very advanced topics. I would not recommend an R beginner starting with these; however, topics covered in these books will become relevant as computational R projects become more complex.  
@@ -75,6 +79,11 @@ I haven't had a chance to check out this book yet; based on reviews and on the w
 > "This book provides an introduction to statistical learning methods. It is aimed for upper level undergraduate students, masters students and Ph.D. students in the non-mathematical sciences. The book also contains a number of R labs with detailed explanations on how to implement the various methods in real life settings, and should be a valuable resource for a practicing data scientist."
 
 This book can be considered the *little brother* of [*The Elements of Statistical Learning*](http://statweb.stanford.edu/~tibs/ElemStatLearn/).
+
+
+---
+
+[Rodrigues, *Functional programming and unit testing for data munging in R*](https://leanpub.com/fput): This is a pay-as-you-like ebook that discusses unit testing (using the R package `testthat`) and package development in R. It's currently (as of January 2017) 60% complete.
 
 
 ## Online courses

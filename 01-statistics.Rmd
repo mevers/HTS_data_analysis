@@ -13,6 +13,17 @@ Many introductory statistics textbooks exist. I am listing here [*Stats - Data a
 
 [Dalgaard](https://www.bookdepository.com/Introductory-Statistics-with-R/9780387790534) and [Casella & Berger](http://www.bookdepository.com/Statistical-Inference-George-Casell-Roger-Berger/9780495391876) are two introductory and more advanced statistics textbooks. [McElreath](https://www.bookdepository.com/Statistical-Rethinking-Richard-McElreath/9781482253443) offers a fantastic introduction to Bayesian statistics and modelling, with a minimum dependence on existing stats and maths knowledge. [Gelman et al.](https://www.bookdepository.com/Bayesian-Data-Analysis-Andrew-Gelman/9781439840955) is a very comprehensive treatise on Bayesian data analysis containing many practical examples.    
 
+## Tutorial and notes
+
+[Bååth, *Beginners Exercise: Bayesian computation with Stan and Farmer Jöns*](http://www.sumsar.net/files/posts/2017-01-15-bayesian-computation-with-stan-and-farmer-jons/stan_exercise.html)  
+[Bååth, *Answers to Bayesian Computation with Stan and Farmer Jöns*](http://www.sumsar.net/files/posts/2017-01-15-bayesian-computation-with-stan-and-farmer-jons/stan_exercise_answers.html)
+
+Bååth gives a set of tutorial questions involving Bayesian statistics using R and [Stan](http://mc-stan.org).
+
+---
+
+[Betancourt, *A Conceptual Introduction to Hamiltonian Monte Carlo*](https://arxiv.org/pdf/1701.02434.pdf): Betancourt gives a comprehensive account of Hamiltonian Monte Carlo (HMC) while avoiding (most of) the mathematical details. HMC has become a key element in statistical computing, and is used in software implementations such as [Stan](http://mc-stan.org).
+
 
 ## Free ebooks
 
