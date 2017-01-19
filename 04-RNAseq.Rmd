@@ -21,12 +21,15 @@ A typical RNA-seq data analysis workflow may consist of (some or all of) the fol
 
 [Conesa et al.](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8) have published a survey of best practices for RNA-seq data analysis that provides a nice overview of typical analysis steps and how to critically assess results.
 
+---
+
+[Williams et al.](http://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1457-z) have published a quantitative assessment of different RNA-seq analysis workflows using a large variety of read aligners and differential gene expression analysis tools.
 
 ---
 
 [Griffith lab RNA-seq tutorial](https://github.com/griffithlab/rnaseq_tutorial/wiki)
 
-Griffith et al. provide an online Wiki-style RNA-seq tutorial with exercises.
+Griffith et al. provide an online Wiki-style RNA-seq analysis tutorial with exercises.
 
 ## Differential gene expression (DGE) analysis
 
