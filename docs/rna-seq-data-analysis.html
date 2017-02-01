@@ -26,7 +26,7 @@
 <meta name="author" content="Maurits Evers">
 
 
-<meta name="date" content="2017-01-20">
+<meta name="date" content="2017-02-02">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -123,6 +123,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.1" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html#general-workflow"><i class="fa fa-check"></i><b>4.1</b> General workflow</a></li>
 <li class="chapter" data-level="4.2" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html#differential-gene-expression-dge-analysis"><i class="fa fa-check"></i><b>4.2</b> Differential gene expression (DGE) analysis</a></li>
 <li class="chapter" data-level="4.3" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html#fusion-gene-identification"><i class="fa fa-check"></i><b>4.3</b> Fusion gene identification</a></li>
+<li class="chapter" data-level="4.4" data-path="rna-seq-data-analysis.html"><a href="rna-seq-data-analysis.html#read-simulation"><i class="fa fa-check"></i><b>4.4</b> Read simulation</a></li>
 </ul></li>
 </ul>
 
@@ -188,7 +189,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <hr />
 <p><a href="https://bitbucket.org/kokonech/infusion/overview">InFusion</a></p>
 <p>InFusion is one of the most recently published tools. It was written in C++/Python, and provides detailed instructions on how to compile the source code, and run the program.</p>
+</div>
+<div id="read-simulation" class="section level2">
+<h2><span class="header-section-number">4.4</span> Read simulation</h2>
+<p>Simulating reads for typical high-throughput sequencing experiments is often useful for assessing and benchmarking novel computational methods. Tools specialise in the simulation of reads from different library protocols (e.g. RNA-seq, whole-genome and exome sequencing) and different sequencing technologies (e.g. Illumina, SOLiD, 454, PacBio).</p>
 <hr />
+<p><a href="http://www.nature.com/nrg/journal/v17/n8/pdf/nrg.2016.57.pdf">Escalona et al.,</a> provide a recent (2016) comparison of tools for the simulation of HTS data. This review is a good starting point to explore different methods, by following the references provided.</p>
+<hr />
+<p><a href="http://sammeth.net/confluence/display/SIM/Home">Flux Simulator</a> is a read simulator for RNA-seq experiments. I have used Flux Simulator in the past to e.g. simulate small RNA and miRNA reads, for assessing the performance of a <a href="http://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0798-3">computational miRNA identification method</a>.</p>
 
 </div>
 </div>

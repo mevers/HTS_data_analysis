@@ -76,4 +76,15 @@ Another list of 39 (as of December 2016) fusion detection tools in given on [Bio
 
 InFusion is one of the most recently published tools. It was written in C++/Python, and provides detailed instructions on how to compile the source code, and run the program.
 
+
+## Read simulation
+
+Simulating reads for typical high-throughput sequencing experiments is often useful for assessing and benchmarking novel computational methods. Tools specialise in the simulation of reads from different library protocols (e.g. RNA-seq, whole-genome and exome sequencing) and different sequencing technologies (e.g. Illumina, SOLiD, 454, PacBio).
+
 ---
+
+[Escalona et al.,](http://www.nature.com/nrg/journal/v17/n8/pdf/nrg.2016.57.pdf) provide a recent (2016) comparison of tools for the simulation of HTS data. This review is a good starting point to explore different methods, by following the references provided.
+
+---
+
+[Flux Simulator](http://sammeth.net/confluence/display/SIM/Home) is a read simulator for RNA-seq experiments. I have used Flux Simulator in the past to e.g. simulate small RNA and miRNA reads, for assessing the performance of a [computational miRNA identification method](http://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0798-3).
