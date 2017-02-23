@@ -126,9 +126,15 @@ biocLite("package_name");
 ```
 ---
 
-[https://www.r-bloggers.com/](https://www.r-bloggers.com/)
+[R-bloggers](https://www.r-bloggers.com/)
 
 R-bloggers is an aggregate blog site, with news surrounding R package development, R tutorials and general R updates. Articles cover a very broad spectrum of R applications.
+
+---
+
+[R Weekly](https://rweekly.org)
+
+Weekly updates from the R community.
 
 ---
 

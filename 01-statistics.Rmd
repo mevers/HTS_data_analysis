@@ -37,3 +37,9 @@ I have not used the [OpenIntro Statistics](https://www.openintro.org/stat/textbo
 [CrossValidated](http://stats.stackexchange.com/)   
 
 CrossValidated is an online forum for people interested in statistics, machine learning, and data analysis. CrossValidated focusses on the theory and methodology of analysing data rather than on programming language-specific issues. Make sure to search through the CrossValidated records before posting a new question.
+
+---
+
+[xkcd](https://xkcd.com)
+
+*The* xkcd.
