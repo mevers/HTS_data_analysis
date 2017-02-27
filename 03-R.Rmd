@@ -54,6 +54,16 @@ Some of the following books cover very advanced topics. I would not recommend an
 
 ---
 
+[ModernDive - An Introduction to Statistical and Data Sciences via R](https://ismayc.github.io/moderndiver-book/index.html) by Chester Ismay and Albert Y. Kim is an online open-source textbook, aiming at teaching students how to
+
+1. use R to explore and visualise data,
+2. use randomisation and simulation to build inferential ideas,
+3. effectively create stories using these ideas to convey information to a lay audience.``
+
+[Taken from the introduction]
+
+---
+
 [<img src="zumel.jpg" alt="Zumel" style="height: 200px;"/>](https://www.manning.com/books/practical-data-science-with-r)
 
 [Zumel & Mount](https://www.manning.com/books/practical-data-science-with-r) has received a lot of positive reviews. From the website:
