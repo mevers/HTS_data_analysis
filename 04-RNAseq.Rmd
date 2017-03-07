@@ -31,6 +31,14 @@ A typical RNA-seq data analysis workflow may consist of (some or all of) the fol
 
 Griffith et al. provide an online Wiki-style RNA-seq analysis tutorial with exercises.
 
+
+---
+
+[Daniel Cook - Awesome Bioinformatics](https://github.com/danielecook/Awesome-Bioinformatics)
+
+Daniel Cook maintains a list of Bioinformatics tools and programs on github.
+
+
 ## Differential gene expression (DGE) analysis
 
 I can specifically recommend the following three tutorials/vignettes surrounding the R packages DESeq2 and limma. In terms of the underlying statistical model, there exists a lot of overlap between DESeq2 and limma. Whether to use one over the other is therefore largely a matter of choice. Both methods are often regarded as the gold-standard methods in regards to DGE analyses.
