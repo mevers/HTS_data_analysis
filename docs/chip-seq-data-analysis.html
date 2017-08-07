@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="general-bioinformatics.html">
-<link rel="next" href="rna-seq-data-analysis.html">
+<link rel="prev" href="rna-seq-data-analysis.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -151,102 +151,71 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-programming" class="section level1">
-<h1><span class="header-section-number">3</span> R programming</h1>
-<p><em>Disclaimer: The following sections list introductory and more advanced material on programming in R, without any claim of completeness.</em></p>
-<p>The order of the materials in every section roughly reflects increasing complexity/difficulty/comprehensiveness. I am listing tutorial materials and notes first and (e)books second, because in my opinion learning R requires a practical learning-by-doing and following-examples type of approach. The best thing to do is to “start coding” yourself right from the start.</p>
-<p>It goes without saying that in order to be able to execute R code, you need to install the R compute environment on your computer. You can download R from the <a href="https://www.r-project.org/">R Project</a>.</p>
-<p><a href="https://www.rstudio.com/products/RStudio/">RStudio</a> is a full IDE (integrated development environment) for code development, including an editor and tools for code management, debugging, and plotting. I highly recommend using it.</p>
-<div id="tutorial-and-notes-1" class="section level2">
-<h2><span class="header-section-number">3.1</span> Tutorial and notes</h2>
-<p><a href="http://www.cbs.dtu.dk/courses/thaiworkshop/exercises/crashR.2.pdf">Gautier, <em>R crash course</em></a>: A short (17 pages) crash course on programming in R.</p>
-<p>I recommend this as a half-day crash-course introduction to R. I have used this material in the past when running R-based gene expression analysis courses for biologists.</p>
-<hr />
-<p><a href="https://cran.r-project.org/doc/manuals/R-intro.pdf">Venables et al., <em>An Introduction to R</em></a>: Fairly comprehensive notes (105 pages) on R from CRAN.</p>
-<p>This is a step up from the crash-course overview. Working through this should give you a good practical working knowledge of how to “do things” in R. Either read front-to-back or use alongside implementing some simple R projects.</p>
-<hr />
-<p><a href="https://drive.google.com/file/d/0B4udF24Yxab0S1hnZlBBTmgzM3M/view">Phillips, <em>Yarrr! The pirate’s guide to R</em></a>: From the book</p>
-<blockquote>
-<p>“This book is meant to introduce you to the basic analytical tools in R, from basic coding and analyses, to data wrangling, plotting, and statistical inference.”</p>
-</blockquote>
-<p>Phillips more or less covers similar ground to Venables, and also introduces some popular and useful R packages from the <a href="https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/">tidyverse</a>.</p>
-<hr />
-<p><a href="http://adv-r.had.co.nz/">Wickham, <em>Advanced R</em></a>: From the website</p>
-<blockquote>
-<p>“The book is designed primarily for R users who want to improve their programming skills and understanding of the language.”</p>
-</blockquote>
-<p>From the master himself.</p>
-<hr />
-<p><a href="http://happygitwithr.com">Bryan et al., <em>Happy Git and GitHub for the useR</em></a>: This is a tutorial on how to setup Git/GitHub within RStudio. It covers basic Git/GitHub and how to connect RStudio to Git/GitHub.</p>
-</div>
-<div id="ebooks" class="section level2">
-<h2><span class="header-section-number">3.2</span> Ebooks</h2>
-<p>Some of the following books cover very advanced topics. I would not recommend an R beginner starting with these; however, topics covered in these books will become relevant as computational R projects become more complex.</p>
-<hr />
-<p><a href="https://www.manning.com/books/practical-data-science-with-r"><img src="gillespie.png" alt="Gillespie" style="height: 200px;"/></a></p>
-<p><a href="https://csgillespie.github.io/efficientR/index.html">Gillespie &amp; Lovelace</a> have an online version of their O’Reilly book <a href="https://www.amazon.com/Efficient-Programming-Practical-Guide-Smarter/dp/1491950781"><em>Efficient R programming</em></a>. From the website:</p>
-<blockquote>
-<p>“There are many excellent R resources for visualization, data science, and package development. Hundreds of scattered vignettes, web pages, and forums explain how to use R in particular domains. But little has been written on how to simply make R work effectively—until now. This hands-on book teaches novices and experienced R users how to write efficient R code.”</p>
-</blockquote>
-<hr />
-<p><a href="https://ismayc.github.io/moderndiver-book/index.html">ModernDive - An Introduction to Statistical and Data Sciences via R</a> by Chester Ismay and Albert Y. Kim is an online open-source textbook, aiming at teaching students how to</p>
+<div id="chip-seq-data-analysis" class="section level1">
+<h1><span class="header-section-number">5</span> ChIP-seq data analysis</h1>
+<p>Work in progress (August 2017)…</p>
+<div id="general-workflow-1" class="section level2">
+<h2><span class="header-section-number">5.1</span> General workflow</h2>
+<p>A typical workflow for the analysis of transcription factor (TF) ChIP-seq data may consist of the following steps. Tools are given in brackets.</p>
 <ol style="list-style-type: decimal">
-<li>use R to explore and visualise data,</li>
-<li>use randomisation and simulation to build inferential ideas,</li>
-<li>effectively create stories using these ideas to convey information to a lay audience.``</li>
+<li>Quality assessment of raw reads (<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">fastqc</a>)</li>
+<li>Adapter trimming and quality filtering (<a href="http://cutadapt.readthedocs.io/en/stable/guide.html">cutadapt</a>, <a href="http://www.usadellab.org/cms/?page=trimmomatic">trimmomatic</a>, <a href="https://sourceforge.net/projects/bbmap/">bbduk.sh</a>)</li>
+<li>Read alignment to reference genome (<a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">bowtie2</a>)</li>
+<li>Quality assessment of mapped reads (<a href="http://qualimap.bioinfo.cipf.es/">QualiMap</a>)</li>
+<li>Read de-duplication (<a href="http://www.htslib.org/">samtools</a>, <a href="https://broadinstitute.github.io/picard/">picard-tools</a>)</li>
+<li>ChIP library assessment (<a href="https://deeptools.github.io/">deepTools</a>)</li>
+<li>Meta-gene analysis (<a href="https://deeptools.github.io/">deepTools</a>)</li>
+<li>Peak calling (<a href="https://github.com/taoliu/MACS">MACS2</a>)</li>
 </ol>
-<p>[Taken from the introduction]</p>
-<hr />
-<p><a href="https://www.manning.com/books/practical-data-science-with-r"><img src="zumel.jpg" alt="Zumel" style="height: 200px;"/></a></p>
-<p><a href="https://www.manning.com/books/practical-data-science-with-r">Zumel &amp; Mount</a> has received a lot of positive reviews. From the website:</p>
-<blockquote>
-<p>“Practical Data Science with R lives up to its name. It explains basic principles without the theoretical mumbo-jumbo and jumps right to the real use cases you’ll face as you collect, curate, and analyze the data crucial to the success of your business. You’ll apply the R programming language and statistical analysis techniques to carefully explained examples based in marketing, business intelligence, and decision support.”</p>
-</blockquote>
-<p>I haven’t had a chance to check out this book yet; based on reviews and on the website, Zumel &amp; Mount provide an introduction to practical R through typical data science problems involving statistical modelling, machine learning, data visualisation, etc.</p>
-<hr />
-<p><a href="https://www.manning.com/books/practical-data-science-with-r"><img src="wickham.png" alt="Wickham" style="height: 200px;"/></a></p>
-<p><a href="http://r4ds.had.co.nz">Wickham &amp; Grolemund</a> have an online version of their upcoming (late 2016) O’Reilly book <a href="https://www.amazon.com/R-Data-Science-Hadley-Wickham/dp/1491910399/ref=as_li_ss_tl?ie=UTF8&amp;qid=1469550189&amp;sr=8-1&amp;keywords=R+for+data+science&amp;linkCode=sl1&amp;tag=devtools-20&amp;linkId=6fe0069f9605cf847ed96c191f4e84dd"><em>R for Data Science</em></a>.</p>
-<hr />
-<p><a href="https://www.manning.com/books/practical-data-science-with-r"><img src="james.jpg" alt="James" style="height: 200px;"/></a></p>
-<p><a href="http://www-bcf.usc.edu/~gareth/ISL/">James et al., <em>An Introduction to Statistical Learning with Applications in R</em></a>: From the website:</p>
-<blockquote>
-<p>“This book provides an introduction to statistical learning methods. It is aimed for upper level undergraduate students, masters students and Ph.D. students in the non-mathematical sciences. The book also contains a number of R labs with detailed explanations on how to implement the various methods in real life settings, and should be a valuable resource for a practicing data scientist.”</p>
-</blockquote>
-<p>This book can be considered the <em>little brother</em> of <a href="http://statweb.stanford.edu/~tibs/ElemStatLearn/"><em>The Elements of Statistical Learning</em></a>.</p>
-<hr />
-<p><a href="https://leanpub.com/fput">Rodrigues, <em>Functional programming and unit testing for data munging in R</em></a>: This is a pay-as-you-like ebook that discusses unit testing (using the R package <code>testthat</code>) and package development in R. It’s currently (as of January 2017) 60% complete.</p>
 </div>
-<div id="online-courses" class="section level2">
-<h2><span class="header-section-number">3.3</span> Online courses</h2>
-<p>Various online courses exist. Following are two sites that provide links to practical online R courses. Some are free, some are not.</p>
-<hr />
-<p><a href="http://r-exercises.com/r-courses/">R course finder</a>: Provides a list of nearly 100 R courses, offered by various universities and institutes, in different formats, and at different costs (starting from free).</p>
-<hr />
-<p><a href="https://www.coursera.org/courses?languages=en&amp;query=r+programming">R courses on coursera</a>: Introductory R courses exist from Johns Hopkins and Duke universities.</p>
+<div id="controls-and-replicate-libraries" class="section level2">
+<h2><span class="header-section-number">5.2</span> Controls and replicate libraries</h2>
+<p>It is critical to have controls for the ChIP libraries to estimate non-specific binding across the genome. The two most frequently used methods use (1) DNA input samples, or (2) IgG “mock-ChIP” control samples. Various publications discuss potential benefits of one method over the other, and it appears that the choice of controls is to some extent based on individual experience and personal preference. Overall, the use of input DNA as controls seems to be preferred over IgG controls (see e.g. <a href="http://www.nature.com/ni/journal/v12/n10/abs/ni.2117.html">Kiddler et al.</a>, <a href="http://genome.cshlp.org/content/22/9/1813.long">Landt et al.</a>, <a href="http://www.nature.com/nrg/journal/v15/n11/full/nrg3788.html">Meyer and Liu</a>). It is important to keep in mind that control libraries are subject to systematic biases due to genomic copy number variations, sequencing biases, read mapping ambiguities, and cell-type specific chromatin structure <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0005241">[Vega et al.]</a>.</p>
+<p>The original 2012 ENCODE guidelines <a href="http://genome.cshlp.org/content/22/9/1813.long">[Land et al.]</a> state that “more than two replicates did not significantly improve site discovery”, and therefore define a standard for ChIP measurements to “be performed on two independent biological repliates”. Results from more recent publications strongly encourage <span class="math inline">\(n\geq 3\)</span> replicate libraries to increase the reliability in the identification of binding sites. For example, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3962196/">[Yang et al.]</a> demonstrate that a simple majority-rule-approach “identifies peaks more reliably in all biological replicates than the absolute concordance of peak identification between any two replicates, further demonstrating the utility of increasing replicate numbers in ChIP-seq experiments”.</p>
 </div>
-<div id="web-sources-blogs-and-online-forums-2" class="section level2">
-<h2><span class="header-section-number">3.4</span> Web sources, blogs and online forums</h2>
-<p>R has a very active community, and in my experience staying up to date with new developments requires at least occasionally following various web sources.</p>
-<hr />
-<p><a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
-<p>The Comprehensive R Archive Network (CRAN) is the central platform for R package distribution. Here you can search for available R packages, and access the often extensive R package documentation (in the form of vignettes and reference manuals).</p>
-<p>All packages from CRAN can be installed directly from within R.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;package_name&quot;</span>);</code></pre></div>
-<hr />
-<p><a href="https://www.bioconductor.org/" class="uri">https://www.bioconductor.org/</a></p>
-<p>Bioconductor provides tools for the statistical analysis and visualisation of HTS data. This includes specialised R packages (including extensive vignettes and reference manuals) and tutorials.</p>
-<p>All R/Bioconductor packages can be installed directly from within R.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">source</span>(<span class="st">&quot;https://www.bioconductor.org/biocLite.R&quot;</span>);
-<span class="kw">biocLite</span>(<span class="st">&quot;package_name&quot;</span>);</code></pre></div>
-<hr />
-<p><a href="https://www.r-bloggers.com/">R-bloggers</a></p>
-<p>R-bloggers is an aggregate blog site, with news surrounding R package development, R tutorials and general R updates. Articles cover a very broad spectrum of R applications.</p>
-<hr />
-<p><a href="https://rweekly.org">R Weekly</a></p>
-<p>Weekly updates from the R community.</p>
-<hr />
-<p><a href="http://stackoverflow.com/" class="uri">http://stackoverflow.com/</a></p>
-<p>Help for R-related programming questions can be found on Stack Overflow. Before posting a new question, make sure to search through their records of R-related questions. Chances are generally very high that somebody has had a similar issue at some point in the past.</p>
+<div id="library-quality-assessment" class="section level2">
+<h2><span class="header-section-number">5.3</span> Library quality assessment</h2>
+<div id="alignment-stats" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Alignment stats</h3>
+<p>Following read alignment, <code>bowtie2</code>’s alignment summaries give a first insight into library quality and sequencing depth. Using an unmasked reference genome, mappability of input samples is commonly around 70-90%. In a repeat-masked reference genome, around 50% of the genomic sequence is identified as interspersed repeats and low-complexity DNA and masked with N’s (see e.g. <a href="http://www.repeatmasker.org/">RepeatMasker</a>); consequently, alignment of input reads against a repeat-masked reference genome will give lower mappability rates around 35-55%. For example, we use a repeat-masked mouse reference genome with an additional copy of the canonical rDNA repeat unit to explore protein binding to the rDNA, and obtain mappability rates of around 40% for high-quality input samples.</p>
+</div>
+<div id="read-duplication" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Read duplication</h3>
+<p>Generally, quality control of aligned reads should include an assessment of the duplication percentage of read (pairs). It is generally advisable to remove duplicate read pairs prior to proceeding with any down-stream analysis; however, some peak-callers (like MACS2) will indepedently remove read duplicates as part of their analysis workflow.</p>
+<p>We can identify and mark duplicate reads using <code>picard-tools MarkDuplicates</code> and/or remove duplicates directly using <code>picard-tools MarkDuplicates REMOVE_DUPLICATES=TRUE</code>. Alternatively, we can use <code>samtools rmdup</code> to remove duplicates. The total percentage of duplicate reads and their chromosomal distribution provide insight into library complexity and biases.</p>
+</div>
+<div id="fingerprint-plot" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> Fingerprint plot</h3>
+<p>A powerful tool to assess the quality of libraries from a ChIP-seq experiment is to plot the <em>fingerprint</em> of a library. The term “fingerprint (plot)” has been coined by the deepTools dev’s, but the original idea was introduced by <a href="https://github.com/songlab/chance/wiki/CHANCE-Manual#checking-the-strength-of-enrichment-in-the-ip">Diaz et al.</a></p>
+<p>From <a href="http://deeptools.readthedocs.io/en/latest/content/tools/plotFingerprint.html">deepTools</a>:</p>
+<blockquote>
+<p>This quality control will most likely be of interest for you if you are dealing with ChIP-seq samples as a pressing question in ChIP-seq experiments is “Did my ChIP work?”, i.e. did the antibody-treatment enrich sufficiently so that the ChIP signal can be separated from the background signal? (After all, around 90% of all DNA fragments in a ChIP experiment will represent the genomic background).</p>
+</blockquote>
+<p>The fingerprint of a ChIP/input library characterises how much of the genome (that is covered by reads) is covered by how large a fraction of the total number of reads. The following figure is taken from <a href="http://deeptools.readthedocs.io/en/latest/content/tools/plotFingerprint.html">deepTools’ documentation</a>. <img src="ChIPseq_fingerprint.png" alt="ChIPseq_fingerprint" style="height: 400px;"/></p>
+A simple example on how the fingerprint distribution is calculated from a read distribution is shown in the following diagram.
+<p style="text-align:center; margin-top:1em">
+<img src="example_fingerprint.png" alt="example_fingerprint" style="height: 300px;"/>
+</p>
+</div>
+<div id="further-qc" class="section level3">
+<h3><span class="header-section-number">5.3.4</span> Further QC</h3>
+<p>Further quality control checks typically involve a principle component analysis of read coverage (1) across the full (binned) genome, and (2) within identified common peak regions. Following appropriate centering of read counts, samples should separate along the first principle component according to whether they are input or ChIP libraries. Separation on the second principle component should then occur according to e.g. biological replicates, time-points or ChIP antibody (depending on the experiment design).</p>
+<p>Additionally, a correlation analysis based on either counts directly or on their ranks gives a summary statistic characterising within-replicate reproducibility. It is important to keep in mind that Pearson’s product moment correlation coefficient will dependent on the dynamic range of the two input variables; we therefore expect on average larger correlation coefficients in pairwise comparisons of input libraries than of ChIP libraries.</p>
+</div>
+</div>
+<div id="references" class="section level2">
+<h2><span class="header-section-number">5.4</span> References</h2>
+<ol style="list-style-type: decimal">
+<li><a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003326">Bailey et al., Practical Guidelines for the Comprehensive Analysis of ChIP-seq Data, PLoS Comp. Biol. 9, e1003326 (2013)</a></li>
+<li><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-12-134">Ho et al., ChIP-chip versus ChIP-seq: Lessons for experimental design and data analysis, BMC Genomics 12, 134 (2011)</a></li>
+<li><a href="http://www.nature.com/ni/journal/v12/n10/abs/ni.2117.html">Kidder, Hu and Zhao, ChIP-Seq: technical considerations for obtaining high-quality data, Nature Immunology 12, 918 (2011)</a></li>
+<li><a href="http://genome.cshlp.org/content/22/9/1813.long">Landt et al., ChIP-seq guidelines and practices of the ENCODE and modENCODE consortia, Genome R5esearch 22, 1813 (2012)</a></li>
+<li><a href="http://www.nature.com/nrg/journal/v15/n11/full/nrg3788.html">Meyer and Liu, Identifying and mitigating bias in next-generation sequencing methods for chromatin biology, Nature Reviews Genetics 15, 709 (2014)</a></li>
+<li><a href="https://academic.oup.com/bib/article/18/2/279/2453282/Recent-advances-in-ChIP-seq-analysis-from-quality">Nakato and Shirahige, Recent advances in ChIP-seq analysis: from quality management to whole-genome annotation, Briefings in Bioinformatics 18, 279 (2017)</a></li>
+<li><a href="https://academic.oup.com/bib/article/18/3/441/2453291/Features-that-define-the-best-ChIP-seq-peak">Thomas et al., Features that define the best ChIP-seq peak calling algorithms, Briefings in Bioinformatics 18, 441 (2017)</a></li>
+<li><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0005241">Vega et al., Inherent Signals in Sequencing-Based Chromatin-ImmunoPrecipitation Control Libraries, PLoS ONE 4, e5241 (2009)</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3962196/">Yang et al., Leveraging biological replicates to improve analysis in ChIP-seq experiments, Comput. Struct. Biotechnol. J. 9, e201401002 (2014)</a></li>
+</ol>
 
 </div>
 </div>
@@ -255,8 +224,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="general-bioinformatics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rna-seq-data-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rna-seq-data-analysis.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
