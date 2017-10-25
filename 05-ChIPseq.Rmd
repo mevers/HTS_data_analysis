@@ -57,6 +57,8 @@ The fingerprint of a ChIP/input library characterises how much of the genome (th
 A simple example on how the fingerprint distribution is calculated from a read distribution is shown in the following diagram.
 <p style="text-align:center; margin-top:1em"><img src="example_fingerprint.png" alt="example_fingerprint" style="height: 300px;"/></p>
 
+Detour: Fingerprint plots are also known as [Lorenz curves](https://en.wikipedia.org/wiki/Lorenz_curve) in economics. Usually in a Lorenz curve the fraction of a population is plotted against the fraction of total income, and they are a useful tool for assessing income inequality. If income is perfectly equally distributed, the Lorenz curve will be a straight line. It is common to characterise income inequality in terms of the [Gini coefficient](https://en.wikipedia.org/wiki/Gini_coefficient): the larger the Gini coefficient, the larger the income inequality. In ChIP-seq fingerprint plots, the corresponding Gini coefficient would characterise the degree of specific binding, where a zero Gini coefficient would indicate uniform non-specific background binding.      
+
 
 ### Further QC
 
@@ -78,3 +80,6 @@ Additionally, a correlation analysis based on either counts directly or on their
 9. [Thomas et al., Features that define the best ChIP-seq peak calling algorithms, Briefings in Bioinformatics 18, 441 (2017)](https://academic.oup.com/bib/article/18/3/441/2453291/Features-that-define-the-best-ChIP-seq-peak)
 10. [Vega et al., Inherent Signals in Sequencing-Based Chromatin-ImmunoPrecipitation Control Libraries, PLoS ONE 4, e5241 (2009)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0005241)
 11. [Yang et al., Leveraging biological replicates to improve analysis in ChIP-seq experiments, Comput. Struct. Biotechnol. J. 9, e201401002 (2014)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3962196/)
+
+More web resources
+1. Notwithstanding the daggy username, [crazyhottommy](https://github.com/crazyhottommy/ChIP-seq-analysis) lists many resources/links associated with ChIP-seq data analysis.
