@@ -151,3 +151,8 @@ Weekly updates from the R community.
 [http://stackoverflow.com/](http://stackoverflow.com/)
 
 Help for R-related programming questions can be found on Stack Overflow. Before posting a new question, make sure to search through their records of R-related questions. Chances are generally very high that somebody has had a similar issue at some point in the past.
+
+
+## Specialised topics
+
+CRAN task view: [High-performance and parallel computing in R](https://cran.r-project.org/web/views/HighPerformanceComputing.html) by Dirk Eddelbuettel.
