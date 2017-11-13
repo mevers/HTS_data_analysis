@@ -20,6 +20,10 @@ A typical RNA-seq data analysis workflow may consist of (some or all of) the fol
 
 ---
 
+[Dündar et al.](http://chagall.med.cornell.edu/RNASEQcourse/Intro2RNAseq.pdf) provide detailed notes from a course on RNA-seq data analysis at Cornell University. Notes include detailed instructions on how to install and run different tools from the command line and within R, and how to interpret results. It's targeted at biologists and clinical researchers with a minimal knowledge of bioinformatics programming and high-throughput sequencing data analysis. Slides, sample files and the link to the GitHub project page can be found on the [course website](http://chagall.med.cornell.edu/RNASEQcourse/).    
+
+---
+
 [Conesa et al.](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8) have published a survey of best practices for RNA-seq data analysis that provides a nice overview of typical analysis steps and how to critically assess results.
 
 ---
@@ -31,7 +35,6 @@ A typical RNA-seq data analysis workflow may consist of (some or all of) the fol
 [Griffith lab RNA-seq tutorial](https://github.com/griffithlab/rnaseq_tutorial/wiki)
 
 Griffith et al. provide an online Wiki-style RNA-seq analysis tutorial with exercises.
-
 
 ---
 
