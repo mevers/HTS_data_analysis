@@ -201,7 +201,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3><span class="header-section-number">5.5.2</span> Read duplication</h3>
 <p>Generally, quality control of aligned reads should include an assessment of the duplication percentage of read (pairs). It is generally advisable to remove duplicate read pairs prior to proceeding with any down-stream analysis; for example, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4597324/">Dozmorov et al.</a> conclude that</p>
 <blockquote>
-<p>[a]ggressive filtering of reads overlapping with low complexity regions, as defined by RepeatMasker, further improved the strength of biological signals, and the correlation between RNA-seq and microarray gene expression data.</p>
+<p>[b]oth adapter trimming and duplicate removal moderately improved the strength of biological signals in RNA-seq and ChIP-seq data. Aggressive filtering of reads overlapping with low complexity regions, as defined by RepeatMasker, further improved the strength of biological signals, and the correlation between RNA-seq and microarray gene expression data.</p>
 </blockquote>
 <p>Some peak-callers (like MACS2) will indepedently (and by default) remove read duplicates as part of their analysis workflow.</p>
 <p>We can identify and mark duplicate reads using <code>picard-tools MarkDuplicates</code> and/or remove duplicates directly using <code>picard-tools MarkDuplicates REMOVE_DUPLICATES=TRUE</code>. Alternatively, we can use <code>samtools rmdup</code> to remove duplicates. The total percentage of duplicate reads and their chromosomal distribution provide insight into library complexity and biases.</p>
@@ -230,6 +230,7 @@ A simple example on how the fingerprint distribution is calculated from a read d
 <h2><span class="header-section-number">5.6</span> References</h2>
 <ol style="list-style-type: decimal">
 <li><a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003326">Bailey et al., Practical Guidelines for the Comprehensive Analysis of ChIP-seq Data, PLoS Comp. Biol. 9, e1003326 (2013)</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4597324/">Dozmorov et al., Detrimental effects of duplicate reads and low complexity regions on RNA- and ChIP-seq data, BMC Bioinformatics 16, S10 (2015)</a></li>
 <li><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-12-134">Ho et al., ChIP-chip versus ChIP-seq: Lessons for experimental design and data analysis, BMC Genomics 12, 134 (2011)</a></li>
 <li><a href="http://www.nature.com/ni/journal/v12/n10/abs/ni.2117.html">Kidder, Hu and Zhao, ChIP-Seq: technical considerations for obtaining high-quality data, Nature Immunology 12, 918 (2011)</a></li>
 <li><a href="http://genome.cshlp.org/content/22/9/1813.long">Landt et al., ChIP-seq guidelines and practices of the ENCODE and modENCODE consortia, Genome R5esearch 22, 1813 (2012)</a></li>

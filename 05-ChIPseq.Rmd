@@ -50,7 +50,7 @@ Following read alignment, `bowtie2`'s alignment summaries give a first insight i
 
 Generally, quality control of aligned reads should include an assessment of the duplication percentage of read (pairs). It is generally advisable to remove duplicate read pairs prior to proceeding with any down-stream analysis; for example, [Dozmorov et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4597324/) conclude that
 
-> [a]ggressive filtering of reads overlapping with low complexity regions, as defined by RepeatMasker, further improved the strength of biological signals, and the correlation between RNA-seq and microarray gene expression data.
+> [b]oth adapter trimming and duplicate removal moderately improved the strength of biological signals in RNA-seq and ChIP-seq data. Aggressive filtering of reads overlapping with low complexity regions, as defined by RepeatMasker, further improved the strength of biological signals, and the correlation between RNA-seq and microarray gene expression data.
 
 Some peak-callers (like MACS2) will indepedently (and by default) remove read duplicates as part of their analysis workflow.
 
@@ -84,6 +84,7 @@ Additionally, a correlation analysis based on either counts directly or on their
 ## References
 
 1. [Bailey et al., Practical Guidelines for the Comprehensive Analysis of ChIP-seq Data, PLoS Comp. Biol. 9, e1003326 (2013)](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003326)
+2. [Dozmorov et al., Detrimental effects of duplicate reads and low complexity regions on RNA- and ChIP-seq data, BMC Bioinformatics 16, S10 (2015)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4597324/)
 2. [Ho et al., ChIP-chip versus ChIP-seq: Lessons for experimental design and data analysis, BMC Genomics 12, 134 (2011)](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-12-134)
 3. [Kidder, Hu and Zhao, ChIP-Seq: technical considerations for obtaining high-quality data, Nature Immunology 12, 918 (2011)](http://www.nature.com/ni/journal/v12/n10/abs/ni.2117.html)
 4. [Landt et al., ChIP-seq guidelines and practices of the ENCODE and modENCODE consortia, Genome R5esearch 22, 1813 (2012)](http://genome.cshlp.org/content/22/9/1813.long)
