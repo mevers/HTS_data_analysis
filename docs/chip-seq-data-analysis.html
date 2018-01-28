@@ -25,7 +25,7 @@
 <meta name="author" content="Maurits Evers">
 
 
-<meta name="date" content="2017-11-13">
+<meta name="date" content="2018-01-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -126,15 +126,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="5" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html"><i class="fa fa-check"></i><b>5</b> ChIP-seq data analysis</a><ul>
 <li class="chapter" data-level="5.1" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#general-workflow-1"><i class="fa fa-check"></i><b>5.1</b> General workflow</a></li>
-<li class="chapter" data-level="5.2" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#the-cistrome-project"><i class="fa fa-check"></i><b>5.2</b> The Cistrome project</a></li>
-<li class="chapter" data-level="5.3" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#controls-and-replicate-libraries"><i class="fa fa-check"></i><b>5.3</b> Controls and replicate libraries</a></li>
-<li class="chapter" data-level="5.4" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#library-quality-assessment"><i class="fa fa-check"></i><b>5.4</b> Library quality assessment</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#alignment-stats"><i class="fa fa-check"></i><b>5.4.1</b> Alignment stats</a></li>
-<li class="chapter" data-level="5.4.2" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#read-duplication"><i class="fa fa-check"></i><b>5.4.2</b> Read duplication</a></li>
-<li class="chapter" data-level="5.4.3" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#fingerprint-plot"><i class="fa fa-check"></i><b>5.4.3</b> Fingerprint plot</a></li>
-<li class="chapter" data-level="5.4.4" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#further-qc"><i class="fa fa-check"></i><b>5.4.4</b> Further QC</a></li>
+<li class="chapter" data-level="5.2" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#online-resources"><i class="fa fa-check"></i><b>5.2</b> Online resources</a></li>
+<li class="chapter" data-level="5.3" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#the-cistrome-project"><i class="fa fa-check"></i><b>5.3</b> The Cistrome project</a></li>
+<li class="chapter" data-level="5.4" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#controls-and-replicate-libraries"><i class="fa fa-check"></i><b>5.4</b> Controls and replicate libraries</a></li>
+<li class="chapter" data-level="5.5" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#library-quality-assessment"><i class="fa fa-check"></i><b>5.5</b> Library quality assessment</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#alignment-stats"><i class="fa fa-check"></i><b>5.5.1</b> Alignment stats</a></li>
+<li class="chapter" data-level="5.5.2" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#read-duplication"><i class="fa fa-check"></i><b>5.5.2</b> Read duplication</a></li>
+<li class="chapter" data-level="5.5.3" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#fingerprint-plot"><i class="fa fa-check"></i><b>5.5.3</b> Fingerprint plot</a></li>
+<li class="chapter" data-level="5.5.4" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#further-qc"><i class="fa fa-check"></i><b>5.5.4</b> Further QC</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#references"><i class="fa fa-check"></i><b>5.5</b> References</a></li>
+<li class="chapter" data-level="5.6" data-path="chip-seq-data-analysis.html"><a href="chip-seq-data-analysis.html#references"><i class="fa fa-check"></i><b>5.6</b> References</a></li>
 </ul></li>
 </ul>
 
@@ -155,7 +156,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="chip-seq-data-analysis" class="section level1">
 <h1><span class="header-section-number">5</span> ChIP-seq data analysis</h1>
-<p>Work in progress (August 2017)…</p>
+<p>Work in progress (January 2018)…</p>
 <div id="general-workflow-1" class="section level2">
 <h2><span class="header-section-number">5.1</span> General workflow</h2>
 <p>A typical workflow for the analysis of transcription factor (TF) ChIP-seq data may consist of the following steps. Tools are given in brackets.</p>
@@ -170,8 +171,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Peak calling (<a href="https://github.com/taoliu/MACS">MACS2</a>)</li>
 </ol>
 </div>
+<div id="online-resources" class="section level2">
+<h2><span class="header-section-number">5.2</span> Online resources</h2>
+<ol style="list-style-type: decimal">
+<li><p><a href="http://bioinformatics-core-shared-training.github.io/ngs-in-bioc/Lectures/Lect6b_ChIP-Seq%20Data%20Analysis.pdf">ChIP-seq Data Analysis, Menon, Bioinformatics core @ CRUK Cambridge Institute, University of Cambridge</a></p></li>
+<li><p><a href="http://cbsu.tc.cornell.edu/lab/doc/CHIPseq_workshop_20150504_lecture1.pdf">Computational pipeline for ChIP-seq Data Analysis, Wang and Sun, Institute of Biotechnology, Cornell University</a></p></li>
+</ol>
+</div>
 <div id="the-cistrome-project" class="section level2">
-<h2><span class="header-section-number">5.2</span> The Cistrome project</h2>
+<h2><span class="header-section-number">5.3</span> The Cistrome project</h2>
 <blockquote>
 <p>The cistrome refers to “the set of cis-acting targets of a trans-acting factor on a genome-wide scale, also known as the in vivo genome-wide location of transcription factor binding-sites or histone modifications”.</p>
 </blockquote>
@@ -179,23 +187,27 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>For example, the <a href="http://cistrome.org/db/#/">Cistrome Data Browser</a> is a good resource for identifying publicly available ChIP-seq and DNase-seq data.</p>
 </div>
 <div id="controls-and-replicate-libraries" class="section level2">
-<h2><span class="header-section-number">5.3</span> Controls and replicate libraries</h2>
+<h2><span class="header-section-number">5.4</span> Controls and replicate libraries</h2>
 <p>It is critical to have controls for the ChIP libraries to estimate non-specific binding across the genome. The two most frequently used methods use (1) DNA input samples, or (2) IgG “mock-ChIP” control samples. Various publications discuss potential benefits of one method over the other, and it appears that the choice of controls is to some extent based on individual experience and personal preference. Overall, the use of input DNA as controls seems to be preferred over IgG controls (see e.g. <a href="http://www.nature.com/ni/journal/v12/n10/abs/ni.2117.html">Kiddler et al.</a>, <a href="http://genome.cshlp.org/content/22/9/1813.long">Landt et al.</a>, <a href="http://www.nature.com/nrg/journal/v15/n11/full/nrg3788.html">Meyer and Liu</a>). It is important to keep in mind that control libraries are subject to systematic biases due to genomic copy number variations, sequencing biases, read mapping ambiguities, and cell-type specific chromatin structure <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0005241">[Vega et al.]</a>.</p>
 <p>The original 2012 ENCODE guidelines <a href="http://genome.cshlp.org/content/22/9/1813.long">[Land et al.]</a> state that “more than two replicates did not significantly improve site discovery”, and therefore define a standard for ChIP measurements to “be performed on two independent biological repliates”. Results from more recent publications strongly encourage <span class="math inline">\(n\geq 3\)</span> replicate libraries to increase the reliability in the identification of binding sites. For example, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3962196/">[Yang et al.]</a> demonstrate that a simple majority-rule-approach “identifies peaks more reliably in all biological replicates than the absolute concordance of peak identification between any two replicates, further demonstrating the utility of increasing replicate numbers in ChIP-seq experiments”.</p>
 </div>
 <div id="library-quality-assessment" class="section level2">
-<h2><span class="header-section-number">5.4</span> Library quality assessment</h2>
+<h2><span class="header-section-number">5.5</span> Library quality assessment</h2>
 <div id="alignment-stats" class="section level3">
-<h3><span class="header-section-number">5.4.1</span> Alignment stats</h3>
+<h3><span class="header-section-number">5.5.1</span> Alignment stats</h3>
 <p>Following read alignment, <code>bowtie2</code>’s alignment summaries give a first insight into library quality and sequencing depth. Using an unmasked reference genome, mappability of input samples is commonly around 70-90%. In a repeat-masked reference genome, around 50% of the genomic sequence is identified as interspersed repeats and low-complexity DNA and masked with N’s (see e.g. <a href="http://www.repeatmasker.org/">RepeatMasker</a>); consequently, alignment of input reads against a repeat-masked reference genome will give lower mappability rates around 35-55%. For example, we use a repeat-masked mouse reference genome with an additional copy of the canonical rDNA repeat unit to explore protein binding to the rDNA, and obtain mappability rates of around 40% for high-quality input samples.</p>
 </div>
 <div id="read-duplication" class="section level3">
-<h3><span class="header-section-number">5.4.2</span> Read duplication</h3>
-<p>Generally, quality control of aligned reads should include an assessment of the duplication percentage of read (pairs). It is generally advisable to remove duplicate read pairs prior to proceeding with any down-stream analysis; however, some peak-callers (like MACS2) will indepedently remove read duplicates as part of their analysis workflow.</p>
+<h3><span class="header-section-number">5.5.2</span> Read duplication</h3>
+<p>Generally, quality control of aligned reads should include an assessment of the duplication percentage of read (pairs). It is generally advisable to remove duplicate read pairs prior to proceeding with any down-stream analysis; for example, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4597324/">Dozmorov et al.</a> conclude that</p>
+<blockquote>
+<p>[a]ggressive filtering of reads overlapping with low complexity regions, as defined by RepeatMasker, further improved the strength of biological signals, and the correlation between RNA-seq and microarray gene expression data.</p>
+</blockquote>
+<p>Some peak-callers (like MACS2) will indepedently (and by default) remove read duplicates as part of their analysis workflow.</p>
 <p>We can identify and mark duplicate reads using <code>picard-tools MarkDuplicates</code> and/or remove duplicates directly using <code>picard-tools MarkDuplicates REMOVE_DUPLICATES=TRUE</code>. Alternatively, we can use <code>samtools rmdup</code> to remove duplicates. The total percentage of duplicate reads and their chromosomal distribution provide insight into library complexity and biases.</p>
 </div>
 <div id="fingerprint-plot" class="section level3">
-<h3><span class="header-section-number">5.4.3</span> Fingerprint plot</h3>
+<h3><span class="header-section-number">5.5.3</span> Fingerprint plot</h3>
 <p>A powerful tool to assess the quality of libraries from a ChIP-seq experiment is to plot the <em>fingerprint</em> of a library. The term “fingerprint (plot)” has been coined by the deepTools dev’s, but the original idea was introduced by <a href="https://github.com/songlab/chance/wiki/CHANCE-Manual#checking-the-strength-of-enrichment-in-the-ip">Diaz et al.</a></p>
 <p>From <a href="http://deeptools.readthedocs.io/en/latest/content/tools/plotFingerprint.html">deepTools</a>:</p>
 <blockquote>
@@ -209,13 +221,13 @@ A simple example on how the fingerprint distribution is calculated from a read d
 <p><strong>Detour</strong>: Fingerprint plots are closely related to <a href="https://en.wikipedia.org/wiki/Lorenz_curve">Lorenz curves</a> in economics. Usually in a Lorenz curve the fraction of a population is plotted against the fraction of total income, and they are a useful tool for assessing income inequality. If income is perfectly equally distributed, the Lorenz curve will be a straight line (just like an equal non-specific read distribution across the genome will give rise to a straight line with zero offset and unit slope). In the context of Lorenz curves, it is common to summarise income inequality in terms of the <a href="https://en.wikipedia.org/wiki/Gini_coefficient">Gini coefficient</a>: the larger the Gini coefficient, the larger the income inequality. It is interesting to note that – to my knowledge – the close connection between fingerprint plots and Lorenz curves has not been discussed. In ChIP-seq fingerprint plots, the corresponding Gini coefficient could be used as a critical summary statistic, characterising the degree of specific binding, with a zero Gini coefficient indicating completely uniform non-specific background binding.</p>
 </div>
 <div id="further-qc" class="section level3">
-<h3><span class="header-section-number">5.4.4</span> Further QC</h3>
+<h3><span class="header-section-number">5.5.4</span> Further QC</h3>
 <p>Further quality control checks typically involve a principle component analysis of read coverage (1) across the full (binned) genome, and (2) within identified common peak regions. Following appropriate centering of read counts, samples should separate along the first principle component according to whether they are input or ChIP libraries. Separation on the second principle component should then occur according to e.g. biological replicates, time-points or ChIP antibody (depending on the experiment design).</p>
 <p>Additionally, a correlation analysis based on either counts directly or on their ranks gives a summary statistic characterising within-replicate reproducibility. It is important to keep in mind that Pearson’s product moment correlation coefficient will dependent on the dynamic range of the two input variables; we therefore expect on average larger correlation coefficients in pairwise comparisons of input libraries than of ChIP libraries.</p>
 </div>
 </div>
 <div id="references" class="section level2">
-<h2><span class="header-section-number">5.5</span> References</h2>
+<h2><span class="header-section-number">5.6</span> References</h2>
 <ol style="list-style-type: decimal">
 <li><a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003326">Bailey et al., Practical Guidelines for the Comprehensive Analysis of ChIP-seq Data, PLoS Comp. Biol. 9, e1003326 (2013)</a></li>
 <li><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-12-134">Ho et al., ChIP-chip versus ChIP-seq: Lessons for experimental design and data analysis, BMC Genomics 12, 134 (2011)</a></li>

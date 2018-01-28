@@ -1,6 +1,7 @@
 # ChIP-seq data analysis
 
-Work in progress (August 2017)...
+Work in progress (January 2018)...
+
 
 ## General workflow
 
@@ -15,6 +16,13 @@ A typical workflow for the analysis of transcription factor (TF) ChIP-seq data m
 7. Meta-gene analysis ([deepTools](https://deeptools.github.io/))
 7. Peak calling ([MACS2](https://github.com/taoliu/MACS))
 
+## Online resources
+
+1. [ChIP-seq Data Analysis, Menon, Bioinformatics core @ CRUK Cambridge Institute, University of Cambridge](http://bioinformatics-core-shared-training.github.io/ngs-in-bioc/Lectures/Lect6b_ChIP-Seq%20Data%20Analysis.pdf)
+
+2. [Computational pipeline for ChIP-seq Data Analysis, Wang and Sun, Institute of Biotechnology, Cornell University](http://cbsu.tc.cornell.edu/lab/doc/CHIPseq_workshop_20150504_lecture1.pdf)
+
+
 ## The Cistrome project
 
 > The cistrome refers to "the set of cis-acting targets of a trans-acting factor on a genome-wide scale, also known as the in vivo genome-wide location of transcription factor binding-sites or histone modifications".
@@ -23,11 +31,13 @@ The [cistrome project](http://www.cistrome.org/Cistrome/Cistrome_Project.html) i
 
 For example, the [Cistrome Data Browser](http://cistrome.org/db/#/) is a good resource for identifying publicly available ChIP-seq and DNase-seq data.
 
+
 ## Controls and replicate libraries
 
 It is critical to have controls for the ChIP libraries to estimate non-specific binding across the genome. The two most frequently used methods use (1) DNA input samples, or (2) IgG "mock-ChIP" control samples. Various publications discuss potential benefits of one method over the other, and it appears that the choice of controls is to some extent based on individual experience and personal preference. Overall, the use of input DNA as controls seems to be preferred over IgG controls (see e.g. [Kiddler et al.](http://www.nature.com/ni/journal/v12/n10/abs/ni.2117.html), [Landt et al.](http://genome.cshlp.org/content/22/9/1813.long), [Meyer and Liu](http://www.nature.com/nrg/journal/v15/n11/full/nrg3788.html)). It is important to keep in mind that control libraries are subject to systematic biases due to genomic copy number variations, sequencing biases, read mapping ambiguities, and cell-type specific chromatin structure [[Vega et al.]](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0005241).
 
 The original 2012 ENCODE guidelines [[Land et al.]](http://genome.cshlp.org/content/22/9/1813.long) state that "more than two replicates did not significantly improve site discovery", and therefore define a standard for ChIP measurements to "be performed on two independent biological repliates". Results from more recent publications strongly encourage $n\geq 3$ replicate libraries to increase the reliability in the identification of binding sites. For example, [[Yang et al.]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3962196/) demonstrate that a simple majority-rule-approach "identifies peaks more reliably in all biological replicates than the absolute concordance of peak identification between any two replicates, further demonstrating the utility of increasing replicate numbers in ChIP-seq experiments".
+
 
 ## Library quality assessment
 
@@ -38,7 +48,11 @@ Following read alignment, `bowtie2`'s alignment summaries give a first insight i
 
 ### Read duplication
 
-Generally, quality control of aligned reads should include an assessment of the duplication percentage of read (pairs). It is generally advisable to remove duplicate read pairs prior to proceeding with any down-stream analysis; however, some peak-callers (like MACS2) will indepedently remove read duplicates as part of their analysis workflow.
+Generally, quality control of aligned reads should include an assessment of the duplication percentage of read (pairs). It is generally advisable to remove duplicate read pairs prior to proceeding with any down-stream analysis; for example, [Dozmorov et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4597324/) conclude that
+
+> [a]ggressive filtering of reads overlapping with low complexity regions, as defined by RepeatMasker, further improved the strength of biological signals, and the correlation between RNA-seq and microarray gene expression data.
+
+Some peak-callers (like MACS2) will indepedently (and by default) remove read duplicates as part of their analysis workflow.
 
 We can identify and mark duplicate reads using `picard-tools MarkDuplicates` and/or remove duplicates directly using `picard-tools MarkDuplicates REMOVE_DUPLICATES=TRUE`. Alternatively, we can use `samtools rmdup` to remove duplicates. The total percentage of duplicate reads and their chromosomal distribution provide insight into library complexity and biases.  
 
