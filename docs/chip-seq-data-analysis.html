@@ -205,6 +205,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </blockquote>
 <p>Some peak-callers (like MACS2) will indepedently (and by default) remove read duplicates as part of their analysis workflow.</p>
 <p>We can identify and mark duplicate reads using <code>picard-tools MarkDuplicates</code> and/or remove duplicates directly using <code>picard-tools MarkDuplicates REMOVE_DUPLICATES=TRUE</code>. Alternatively, we can use <code>samtools rmdup</code> to remove duplicates. The total percentage of duplicate reads and their chromosomal distribution provide insight into library complexity and biases.</p>
+<p>Additional notes on <code>samtools rmdup</code> vs. <code>picard-tools MarkDuplicates</code> taken from a <a href="https://gatkforums.broadinstitute.org/gatk/discussion/6793/picard-markduplicates-vs-samtools-rmdup-for-variant-calling-with-gatk">discussion on the GATK forum</a>:</p>
+<ul>
+<li><p><code>MarkDuplicates</code> by default marks properly paired PE reads and SE reads (e.g. mate unmapped but not secondary/supplementary) with the <code>1024</code> flag (hexadecimal: <code>0x400</code>) <strong>without removing the read</strong>. <code>MarkDuplicates</code> scores primary mapped reads based on the sum of base quality scores for both mates of a pair.</p></li>
+<li><p><code>rmdup</code> retains the read pair with the highest mapping quality, and <strong>removes any duplicate read pairs</strong> from the output BAM/SAM file.</p></li>
+</ul>
 </div>
 <div id="fingerprint-plot" class="section level3">
 <h3><span class="header-section-number">5.5.3</span> Fingerprint plot</h3>

@@ -54,7 +54,15 @@ Generally, quality control of aligned reads should include an assessment of the 
 
 Some peak-callers (like MACS2) will indepedently (and by default) remove read duplicates as part of their analysis workflow.
 
-We can identify and mark duplicate reads using `picard-tools MarkDuplicates` and/or remove duplicates directly using `picard-tools MarkDuplicates REMOVE_DUPLICATES=TRUE`. Alternatively, we can use `samtools rmdup` to remove duplicates. The total percentage of duplicate reads and their chromosomal distribution provide insight into library complexity and biases.  
+We can identify and mark duplicate reads using `picard-tools MarkDuplicates` and/or remove duplicates directly using `picard-tools MarkDuplicates REMOVE_DUPLICATES=TRUE`. Alternatively, we can use `samtools rmdup` to remove duplicates. The total percentage of duplicate reads and their chromosomal distribution provide insight into library complexity and biases.
+
+Additional notes on `samtools rmdup` vs. `picard-tools MarkDuplicates` taken from a [discussion on the GATK forum](https://gatkforums.broadinstitute.org/gatk/discussion/6793/picard-markduplicates-vs-samtools-rmdup-for-variant-calling-with-gatk):
+
+* `MarkDuplicates` by default marks properly paired PE reads and SE reads (e.g. mate unmapped but not secondary/supplementary) with the `1024` flag (hexadecimal: `0x400`) **without removing the read**. `MarkDuplicates` scores primary mapped reads based on the sum of base quality scores for both mates of a pair.
+
+* `rmdup` retains the read pair with the highest mapping quality, and **removes any duplicate read pairs** from the output BAM/SAM file.
+
+
 
 
 ### Fingerprint plot
