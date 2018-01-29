@@ -18,6 +18,8 @@ A typical workflow for the analysis of transcription factor (TF) ChIP-seq data m
 
 ## Online resources
 
+0. [ChIP-seq Analysis, Albert, Bioinformatics Consulting Center @ Penn State University](http://ged.msu.edu/angus/tutorials-2011/files/lecture-chipseq.pdf)
+
 1. [ChIP-seq Data Analysis, Menon, Bioinformatics core @ CRUK Cambridge Institute, University of Cambridge](http://bioinformatics-core-shared-training.github.io/ngs-in-bioc/Lectures/Lect6b_ChIP-Seq%20Data%20Analysis.pdf)
 
 2. [Computational pipeline for ChIP-seq Data Analysis, Wang and Sun, Institute of Biotechnology, Cornell University](http://cbsu.tc.cornell.edu/lab/doc/CHIPseq_workshop_20150504_lecture1.pdf)
@@ -105,4 +107,5 @@ Additionally, a correlation analysis based on either counts directly or on their
 11. [Yang et al., Leveraging biological replicates to improve analysis in ChIP-seq experiments, Comput. Struct. Biotechnol. J. 9, e201401002 (2014)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3962196/)
 
 More web resources
-1. Notwithstanding the daggy username, [crazyhottommy](https://github.com/crazyhottommy/ChIP-seq-analysis) lists many resources/links associated with ChIP-seq data analysis.
+
+Notwithstanding the username, [crazyhottommy](https://github.com/crazyhottommy/ChIP-seq-analysis) lists many resources/links associated with ChIP-seq data analysis.
