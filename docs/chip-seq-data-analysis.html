@@ -235,6 +235,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </table>
 </center>
 <p>Average sample duplication rates will depend on e.g. the read length, sequencing depth, etc. For example, in the table above, the larger numbers in the ranges may correspond to shorter read lengths, whereas longer reads will give smaller duplication rates. Additionally, increasing the sequencing depth will lead to an increase in duplication rates.</p>
+<p>Unexpectedly high duplication rates may be due to:</p>
+<ol style="list-style-type: decimal">
+<li>binding factors interacting predominantly with very few sites,</li>
+<li>binding factors interacting predominantly with highly repetitive genomic regions (e.g. a Pol-I associated TF that interacts primarly with the rDNA repeat units)</li>
+<li>a failed IP and/or the amount of IP’ed chromatin being too low for library construction resulting in a large amount of PCR cycles giving rise to a large number of PCR duplicates</li>
+</ol>
 </div>
 <div id="fingerprint-plot" class="section level3">
 <h3><span class="header-section-number">5.5.3</span> Fingerprint plot</h3>

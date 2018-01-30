@@ -75,7 +75,13 @@ IP      | 30-60%
 Input   | 1-10%
 </center>
 
-Average sample duplication rates will depend on e.g. the read length, sequencing depth, etc. For example, in the table above, the larger numbers in the ranges may correspond to shorter read lengths, whereas longer reads will give smaller duplication rates. Additionally, increasing the sequencing depth will lead to an increase in duplication rates.  
+Average sample duplication rates will depend on e.g. the read length, sequencing depth, etc. For example, in the table above, the larger numbers in the ranges may correspond to shorter read lengths, whereas longer reads will give smaller duplication rates. Additionally, increasing the sequencing depth will lead to an increase in duplication rates.
+
+Unexpectedly high duplication rates may be due to:
+
+1. binding factors interacting predominantly with very few sites,
+2. binding factors interacting predominantly with highly repetitive genomic regions (e.g. a Pol-I associated TF that interacts primarly with the rDNA repeat units)
+3. a failed IP and/or the amount of IP'ed chromatin being too low for library construction resulting in a large amount of PCR cycles giving rise to a large number of PCR duplicates  
 
 ### Fingerprint plot
 
