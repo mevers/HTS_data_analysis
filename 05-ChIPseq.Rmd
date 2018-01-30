@@ -18,11 +18,13 @@ A typical workflow for the analysis of transcription factor (TF) ChIP-seq data m
 
 ## Online resources
 
-0. [ChIP-seq Analysis, Albert, Bioinformatics Consulting Center @ Penn State University](http://ged.msu.edu/angus/tutorials-2011/files/lecture-chipseq.pdf)
+1. [ChIP-seq Analysis, Albert, Bioinformatics Consulting Center @ Penn State University](http://ged.msu.edu/angus/tutorials-2011/files/lecture-chipseq.pdf)
 
-1. [ChIP-seq Data Analysis, Menon, Bioinformatics core @ CRUK Cambridge Institute, University of Cambridge](http://bioinformatics-core-shared-training.github.io/ngs-in-bioc/Lectures/Lect6b_ChIP-Seq%20Data%20Analysis.pdf)
+2. [NHS data analysis with R/Bioconductor: ChIP-seq workflow, Kaundal, UC Riverside](http://biocluster.ucr.edu/~rkaundal/workshops/R_feb2016/ChIPseq/ChIPseq.html)
 
-2. [Computational pipeline for ChIP-seq Data Analysis, Wang and Sun, Institute of Biotechnology, Cornell University](http://cbsu.tc.cornell.edu/lab/doc/CHIPseq_workshop_20150504_lecture1.pdf)
+3. [ChIP-seq Data Analysis, Menon, Bioinformatics core @ CRUK Cambridge Institute, University of Cambridge](http://bioinformatics-core-shared-training.github.io/ngs-in-bioc/Lectures/Lect6b_ChIP-Seq%20Data%20Analysis.pdf)
+
+4. [Computational pipeline for ChIP-seq Data Analysis, Wang and Sun, Institute of Biotechnology, Cornell University](http://cbsu.tc.cornell.edu/lab/doc/CHIPseq_workshop_20150504_lecture1.pdf)
 
 
 ## The Cistrome project
@@ -63,8 +65,6 @@ Additional notes on `samtools rmdup` vs. `picard-tools MarkDuplicates` taken fro
 * `MarkDuplicates` by default marks properly paired PE reads and SE reads (e.g. mate unmapped but not secondary/supplementary) with the `1024` flag (hexadecimal: `0x400`) **without removing the read**. `MarkDuplicates` scores primary mapped reads based on the sum of base quality scores for both mates of a pair.
 
 * `rmdup` retains the read pair with the highest mapping quality, and **removes any duplicate read pairs** from the output BAM/SAM file.
-
-
 
 
 ### Fingerprint plot
