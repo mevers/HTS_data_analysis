@@ -9,6 +9,7 @@ output:
 documentclass: book
 biblio-style: apalike
 link-citations: yes
+css: styles.css
 ---
 
 # Preface {-}

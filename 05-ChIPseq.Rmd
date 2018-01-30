@@ -66,6 +66,16 @@ Additional notes on `samtools rmdup` vs. `picard-tools MarkDuplicates` taken fro
 
 * `rmdup` retains the read pair with the highest mapping quality, and **removes any duplicate read pairs** from the output BAM/SAM file.
 
+Typical duplication rates:
+
+<center>
+Library | Duplication rate
+:------:|:---------------:
+IP      | 30-60%
+Input   | 1-10%
+</center>
+
+Average sample duplication rates will depend on e.g. the read length, sequencing depth, etc. For example, in the table above, the larger numbers in the ranges may correspond to shorter read lengths, whereas longer reads will give smaller duplication rates. Additionally, increasing the sequencing depth will lead to an increase in duplication rates.  
 
 ### Fingerprint plot
 

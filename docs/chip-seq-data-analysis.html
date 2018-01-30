@@ -25,7 +25,7 @@
 <meta name="author" content="Maurits Evers">
 
 
-<meta name="date" content="2018-01-30">
+<meta name="date" content="2018-01-31">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -87,6 +87,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
+<link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 
 <body>
@@ -212,6 +213,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p><code>MarkDuplicates</code> by default marks properly paired PE reads and SE reads (e.g. mate unmapped but not secondary/supplementary) with the <code>1024</code> flag (hexadecimal: <code>0x400</code>) <strong>without removing the read</strong>. <code>MarkDuplicates</code> scores primary mapped reads based on the sum of base quality scores for both mates of a pair.</p></li>
 <li><p><code>rmdup</code> retains the read pair with the highest mapping quality, and <strong>removes any duplicate read pairs</strong> from the output BAM/SAM file.</p></li>
 </ul>
+<p>Typical duplication rates:</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Library</th>
+<th align="center">Duplication rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">IP</td>
+<td align="center">30-60%</td>
+</tr>
+<tr class="even">
+<td align="center">Input</td>
+<td align="center">1-10%</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>Average sample duplication rates will depend on e.g. the read length, sequencing depth, etc. For example, in the table above, the larger numbers in the ranges may correspond to shorter read lengths, whereas longer reads will give smaller duplication rates. Additionally, increasing the sequencing depth will lead to an increase in duplication rates.</p>
 </div>
 <div id="fingerprint-plot" class="section level3">
 <h3><span class="header-section-number">5.5.3</span> Fingerprint plot</h3>
