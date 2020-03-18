@@ -16,6 +16,8 @@ A typical workflow for the analysis of transcription factor (TF) ChIP-seq data m
 7. Meta-gene analysis ([deepTools](https://deeptools.github.io/))
 7. Peak calling ([MACS2](https://github.com/taoliu/MACS))
 
+    Note that there exist two different major versions: MACS (latest version 1.4.2) and MACS2 (latest version 2.1.0); both have been developed in Shirley Liu's lab. I recommend using the most up-to-date MACS2 version, which can be downloaded via its [GitHub project site](https://github.com/taoliu/MACS/).   
+
 ## Online resources
 
 1. [ChIP-seq Analysis, Albert, Bioinformatics Consulting Center @ Penn State University](http://ged.msu.edu/angus/tutorials-2011/files/lecture-chipseq.pdf)
